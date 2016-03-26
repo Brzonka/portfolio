@@ -22,7 +22,7 @@ body{
 	text-align: center;
 }
 .page-translate{
-	transform: translateX(-300px);
+	transform: translateX(-250px);
 }
 .header,
 .main,
@@ -66,6 +66,17 @@ body{
 			transition: margin 0.3s;
 			width: 30px;
 		}
+		&--close-style{
+			& .menu__hamburger__item:nth-child(1){
+				display: none
+			}
+			& .menu__hamburger__item:nth-child(2){
+				display: none
+			}
+			& .menu__hamburger__item:nth-child(3){
+				display: none
+			}
+		}
 	}
 	&__text{
 		color: $secondColor;
@@ -76,25 +87,31 @@ body{
 	}
 	&--fixed{
 		background-color: $baseColor;
+		left: 0;
 		position: fixed;
+		top: 0;
 		z-index: 100;
 	}
 }
 .navigation{
 	background-color: $baseColor;
+	border-left: 1px solid #555555;
 	box-sizing: border-box;
-	height: 100vh;
+	height: 100%;
 	padding-top: 80px;
 	position: fixed;
-	right: -300px;
-	width: 300px;
+	right: -250px;
+	top: 0;
+	transition: 1s;
+	width: 250px;
 	z-index: 9999;
 	&__list{
 		width: 100%;
 		&__item{
-			border-bottom: 1px solid #777777;
+			border-bottom: 1px solid #555555;
 			color: $secondColor;
-			font: 20px/50px 'Fira Mono', sans-serif;
+			font: 20px/50px 'Raleway', sans-serif;
+			letter-spacing: 2px;
 			margin: 0 auto;	
 			text-align: left;
 			width: 80%;

@@ -13,14 +13,16 @@ $(window).scroll(function(){
 $(document).ready(function(){
 	$('.menu__hamburger').click(function(){
 		if($('header').hasClass('page-translate')){
-			$('header, main, footer').removeClass('page-translate');
+			$('header, main, footer, nav').removeClass('page-translate');
+			$('.menu__hamburger').removeClass('menu__hamburger--close-style');
 		}
 		else if(($(window).trigger("scroll"))&&($('header').hasClass('page-translate'))){
-			$('header, main, footer').removeClass('page-translate');
-
+			$('header, main, footer, nav').removeClass('page-translate');
+			$('.menu__hamburger').removeClass('menu__hamburger--close-style');
 		}
 		else{
-			$('header, main, footer').addClass('page-translate');
+			$('header, main, footer, nav').addClass('page-translate');
+			$('.menu__hamburger').removeClass('menu__hamburger--close-style');
 		}
 	})
 })
