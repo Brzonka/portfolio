@@ -21,6 +21,10 @@ $secondColor: rgba(255,255,255,1);
 	from{position: relative; top: 20px;}
 	to{opacity:1; position: relative; top:0px;}
 }
+@keyframes start-color{
+	from{background-color: &secondColor;}
+	to{background-color: #000000;}
+}
 body{
 	font-family: 'Ubuntu', sans-serif;
 	text-align: center;
@@ -234,7 +238,7 @@ body{
 	padding-right: 0;
 	position: relative;
 	&__photo{
-		animation: 0.5s start-slide-up2 0.9s forwards paused;
+		animation: 1.2s start-slide-up2 0.9s forwards paused;
 		display: block;
 		margin-top: -30px;
 		opacity: 0;
@@ -242,7 +246,7 @@ body{
 		width: 100%;
 	}
 	&__description{
-		animation: 0.5s start-slide-up2 1.2s forwards paused;
+		animation: 0.7s start-slide-up2 1.2s forwards paused;
 		font-size: 14px;
 		line-height: 30px;
 		margin: 0 auto;
@@ -326,7 +330,8 @@ body{
 	padding-right: 0;
 	overflow: hidden;
 	&__list{
-		background-color: $baseColor;
+		animation: 2s start-color 1.2s forwards paused;
+		background-color: $secondColor;
 		box-sizing: border-box;
 		margin: 20px auto;
 		position: relative;

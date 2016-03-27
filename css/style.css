@@ -80,6 +80,11 @@ a {
     opacity: 1;
     position: relative;
     top: 0px; } }
+@keyframes start-color {
+  from {
+    background-color: secondColor; }
+  to {
+    background-color: #000000; } }
 body {
   font-family: 'Ubuntu', sans-serif;
   text-align: center; }
@@ -275,13 +280,13 @@ body {
   padding-right: 0;
   position: relative; }
   .about__header {
-    animation: 0.5s start-slide-up2 forwards paused;
+    animation: 0.8s start-slide-up2 forwards paused;
     font: normal normal bold 26px/150% 'Ubuntu', sans-serif;
     letter-spacing: 3px;
     opacity: 0;
     text-transform: uppercase; }
   .about__header-bottom {
-    animation: 0.5s start-slide-up2 0.3s forwards paused;
+    animation: 0.8s start-slide-up2 0.3s forwards paused;
     color: #555555;
     font: normal normal bold 12px/150% 'Ubuntu', sans-serif;
     letter-spacing: 2px;
@@ -301,14 +306,14 @@ body {
       margin: 15px auto;
       width: 150px; }
   .about__photo {
-    animation: 0.5s start-slide-up2 0.9s forwards paused;
+    animation: 1.2s start-slide-up2 0.9s forwards paused;
     display: block;
     margin-top: -30px;
     opacity: 0;
     transition: 0.5s;
     width: 100%; }
   .about__description {
-    animation: 0.5s start-slide-up2 1.2s forwards paused;
+    animation: 0.7s start-slide-up2 1.2s forwards paused;
     font-size: 14px;
     line-height: 30px;
     margin: 0 auto;
@@ -320,13 +325,13 @@ body {
   padding: 80px 15px;
   text-align: center; }
   .technology__header {
-    animation: 0.5s start-slide-up2 forwards paused;
+    animation: 0.8s start-slide-up2 forwards paused;
     font: normal normal bold 26px/150% 'Ubuntu', sans-serif;
     letter-spacing: 3px;
     opacity: 0;
     text-transform: uppercase; }
   .technology__header-bottom {
-    animation: 0.5s start-slide-up2 0.3s forwards paused;
+    animation: 0.8s start-slide-up2 0.3s forwards paused;
     color: #555555;
     font: normal normal bold 12px/150% 'Ubuntu', sans-serif;
     letter-spacing: 2px;
@@ -409,13 +414,13 @@ body {
   padding: 80px 15px;
   text-align: center; }
   .projects__header {
-    animation: 0.5s start-slide-up2 forwards paused;
+    animation: 0.8s start-slide-up2 forwards paused;
     font: normal normal bold 26px/150% 'Ubuntu', sans-serif;
     letter-spacing: 3px;
     opacity: 0;
     text-transform: uppercase; }
   .projects__header-bottom {
-    animation: 0.5s start-slide-up2 0.3s forwards paused;
+    animation: 0.8s start-slide-up2 0.3s forwards paused;
     color: #555555;
     font: normal normal bold 12px/150% 'Ubuntu', sans-serif;
     letter-spacing: 2px;
@@ -443,13 +448,13 @@ body {
   padding-right: 0;
   overflow: hidden; }
   .after-hours__header {
-    animation: 0.5s start-slide-up2 forwards paused;
+    animation: 0.8s start-slide-up2 forwards paused;
     font: normal normal bold 26px/150% 'Ubuntu', sans-serif;
     letter-spacing: 3px;
     opacity: 0;
     text-transform: uppercase; }
   .after-hours__header-bottom {
-    animation: 0.5s start-slide-up2 0.3s forwards paused;
+    animation: 0.8s start-slide-up2 0.3s forwards paused;
     color: #555555;
     font: normal normal bold 12px/150% 'Ubuntu', sans-serif;
     letter-spacing: 2px;
@@ -469,7 +474,8 @@ body {
       margin: 15px auto;
       width: 150px; }
   .after-hours__list {
-    background-color: black;
+    animation: 2s start-color 1.2s forwards paused;
+    background-color: white;
     box-sizing: border-box;
     margin: 20px auto;
     position: relative;
@@ -553,13 +559,13 @@ body {
   text-align: center;
   margin-bottom: 100px; }
   .contact__header {
-    animation: 0.5s start-slide-up2 forwards paused;
+    animation: 0.8s start-slide-up2 forwards paused;
     font: normal normal bold 26px/150% 'Ubuntu', sans-serif;
     letter-spacing: 3px;
     opacity: 0;
     text-transform: uppercase; }
   .contact__header-bottom {
-    animation: 0.5s start-slide-up2 0.3s forwards paused;
+    animation: 0.8s start-slide-up2 0.3s forwards paused;
     color: #555555;
     font: normal normal bold 12px/150% 'Ubuntu', sans-serif;
     letter-spacing: 2px;

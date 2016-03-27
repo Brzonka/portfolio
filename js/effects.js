@@ -82,7 +82,7 @@ $(document).ready(function(){
 		$('.projects__header, .projects__header-bottom, .projects__description').css({"animation-play-state":"running"});}
 
 	if(height>(offset[4]-height_window/2)){
-		$('.after-hours__header, .after-hours__header-bottom, .after-hours__list__item').css({"animation-play-state":"running"});}
+		$('.after-hours__header, .after-hours__header-bottom, .after-hours__list, .after-hours__list__item').css({"animation-play-state":"running"});}
 
 	if(height>(offset[5]-height_window/2)){
 		$('.contact__header, .contact__header-bottom, .contact__description, .contact__phone, .contact__email, .contact__social-media').css({"animation-play-state":"running"});}
