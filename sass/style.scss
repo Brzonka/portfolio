@@ -104,6 +104,19 @@ body{
 		margin-top: 36px;
 		text-transform: uppercase;
 	}
+	&__text-name{
+		color: $secondColor;
+		float: left;
+		font: bold 20px/150% 'Ubuntu', sans-serif;
+		letter-spacing: 2px;
+		margin-left: 40px;
+		margin-top: 36px;
+		opacity: 0;
+		text-transform: uppercase;
+		&--color{
+			color: rgba(200, 187, 117, 1);
+		}
+	}
 	&--fixed{
 		background-color: $baseColor;
 		border-bottom: 1px solid #555555;
@@ -112,6 +125,9 @@ body{
 		top: 0;
 		transition: 1s;
 		z-index: 100;
+		& .menu__text-name{
+			opacity: 1;
+		}
 	}
 }
 .prelude{
@@ -489,7 +505,7 @@ body{
 	}
 	.about{
 		&__photo{
-			margin-top: -90px;
+			margin-top: -70px;
 		}
 	}
 }
@@ -517,7 +533,7 @@ body{
 			font-size: 22px;
 		}
 		&__photo{
-			margin-top: -160px;
+			margin-top: -100px;
 		}
 	}
 	.technology__list__item{
@@ -554,7 +570,7 @@ body{
 			font-size: 26px;
 		}
 		&__photo{
-			margin-top: -200px;
+			margin-top: -130px;
 		}
 	}
 	.contact{
@@ -577,12 +593,12 @@ body{
 }
 @media (min-width: 1600px){
 	.about{
-		padding-top: 160px;
+		padding-top: 130px;
 		&__description{
 			font-size: 26px;
 		}
 		&__photo{
-			margin-top: -280px;
+			margin-top: -160px;
 		}
 	}
 }

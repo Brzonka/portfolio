@@ -1,7 +1,7 @@
 $(window).scroll(function(){
 	var height = $('.about').offset().top;
 	var height2 = $(window).scrollTop();
-	if (height2>height){
+	if (height2>=height){
 		$('.menu').addClass('menu--fixed').fadeIn();
 	}
 	else{
@@ -52,6 +52,10 @@ $(document).ready(function() {
 		else if($(this).attr('href')=="#6"){var h1=offset[5];}
 		$("html, body").stop().animate( { scrollTop: h1 }, 1000);
 	});
+	$(".prelude__button").click(function() {
+		$("html, body").stop().animate( { scrollTop: offset[1] }, 1000);
+	});
+
 });
 
 $(document).ready(function(){
