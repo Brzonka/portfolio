@@ -1,6 +1,6 @@
 $(window).scroll(function(){
 	var height = $('.about').offset().top;
-	var height2 = $(window).scrollTop();
+	var height2 = $(window).scrollTop() + 50;
 	if (height2>=height){
 		$('.menu').addClass('menu--fixed').fadeIn();
 	}

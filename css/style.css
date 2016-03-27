@@ -156,8 +156,7 @@ body {
     float: left;
     font: bold 20px/150% 'Ubuntu', sans-serif;
     letter-spacing: 2px;
-    margin-left: 40px;
-    margin-top: 36px;
+    margin: 18px 40px;
     opacity: 0;
     text-transform: uppercase; }
     .menu__text-name--color {
@@ -170,6 +169,12 @@ body {
     top: 0;
     transition: 1s;
     z-index: 100; }
+    .menu--fixed .menu__hamburger {
+      margin: 18px 40px; }
+      .menu--fixed .menu__hamburger:hover {
+        margin: 12px 40px; }
+    .menu--fixed .menu__text {
+      margin: 20px -10px; }
     .menu--fixed .menu__text-name {
       opacity: 1; }
 

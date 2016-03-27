@@ -109,8 +109,7 @@ body{
 		float: left;
 		font: bold 20px/150% 'Ubuntu', sans-serif;
 		letter-spacing: 2px;
-		margin-left: 40px;
-		margin-top: 36px;
+		margin: 18px 40px;
 		opacity: 0;
 		text-transform: uppercase;
 		&--color{
@@ -125,9 +124,21 @@ body{
 		top: 0;
 		transition: 1s;
 		z-index: 100;
-		& .menu__text-name{
-			opacity: 1;
+		& .menu{
+			&__hamburger{
+				margin: 18px 40px;
+				&:hover{
+					margin: 12px 40px;
+				}
+			}
+			&__text{
+				margin: 20px -10px;
+			}
+			&__text-name{
+				opacity: 1;
+			}
 		}
+
 	}
 }
 .prelude{
