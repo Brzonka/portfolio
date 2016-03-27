@@ -13,6 +13,10 @@ $secondColor: rgba(255,255,255,1);
 	from{position: relative; top: -50px;}
 	to{opacity:1; position: relative; top:0px;}
 }
+@keyframes start-slide-up2{
+	from{position: relative; top: -30px;}
+	to{opacity:1; position: relative; top:0px;}
+}
 @keyframes start-button{
 	from{position: relative; top: 20px;}
 	to{opacity:1; position: relative; top:0px;}
@@ -47,12 +51,14 @@ body{
 	width: 100%;
 	&__hamburger{
 		float: right;
-		margin: 40px;
+		margin: 35px;
+		padding: 5px;
 		position: relative;
 		transition: margin 0.3s;
 		z-index: 120;
 		&:hover{
-			margin: 34px 40px;
+			cursor: pointer;
+			margin: 29px 35px;
 		}
 		&:hover .menu__hamburger__item{
 			margin: 6px 0;
@@ -63,18 +69,31 @@ body{
 			border-radius: 1px;
 			height: 2px;
 			margin: 3px 0;
-			transition: margin 0.3s;
+			transition: 0.3s;
 			width: 30px;
 		}
 		&--close-style{
+			padding: 15px 5px;
+			margin: 25px 30px;
 			& .menu__hamburger__item:nth-child(1){
-				display: none
+				margin: 0; 				
+				position: relative;
+				transform: rotate(45deg);
+				top:5px;
+				width: 40px;
 			}
 			& .menu__hamburger__item:nth-child(2){
 				display: none
 			}
 			& .menu__hamburger__item:nth-child(3){
-				display: none
+				margin: 0;
+				position: relative;
+				transform: rotate(-45deg);
+				top:2px;
+				width: 40px;
+			}
+			&:hover{
+				margin: 25px 30px;
 			}
 		}
 	}
@@ -87,38 +106,14 @@ body{
 	}
 	&--fixed{
 		background-color: $baseColor;
+		border-bottom: 1px solid #555555;
 		left: 0;
 		position: fixed;
 		top: 0;
+		transition: 1s;
 		z-index: 100;
 	}
 }
-.navigation{
-	background-color: $baseColor;
-	border-left: 1px solid #555555;
-	box-sizing: border-box;
-	height: 100%;
-	padding-top: 80px;
-	position: fixed;
-	right: -250px;
-	top: 0;
-	transition: 1s;
-	width: 250px;
-	z-index: 9999;
-	&__list{
-		width: 100%;
-		&__item{
-			border-bottom: 1px solid #555555;
-			color: $secondColor;
-			font: 20px/50px 'Raleway', sans-serif;
-			letter-spacing: 2px;
-			margin: 0 auto;	
-			text-align: left;
-			width: 80%;
-		}
-	}
-}
-
 .prelude{
 	overflow: hidden;
 	text-align: center;
@@ -143,7 +138,7 @@ body{
 		}
 	}
 	&__button{
-		@include cv-button;
+		@include buttons();
 		animation: 1s start-button 2.5s forwards;
 		opacity: 0;
 
@@ -174,22 +169,57 @@ body{
 		transition: 0.5s;
 	}
 }
-
+.navigation{
+	background-color: $baseColor;
+	border-left: 1px solid #555555;
+	box-sizing: border-box;
+	height: 100%;
+	padding-top: 80px;
+	position: fixed;
+	right: -250px;
+	top: 0;
+	transition: 1s;
+	width: 250px;
+	z-index: 9999;
+	&__list{
+		width: 100%;
+		&__item{
+			border-bottom: 1px solid #555555;
+			margin: 0 auto;	
+			text-align: left;
+			width: 80%;
+			&__link{
+				color: $secondColor;
+				font: 20px/50px 'Raleway', sans-serif;
+				letter-spacing: 2px;
+				transition: 0.5s;
+				&:hover{
+					color: rgba(190, 177, 107, 1);
+					letter-spacing: 5px;
+				}
+			}
+		}
+	}
+}
 .about{
 	@include header-of-section;
 	padding-left:0;
 	padding-right: 0;
 	position: relative;
 	&__photo{
+		animation: 0.5s start-slide-up2 0.9s forwards paused;
 		display: block;
 		margin-top: -30px;
-		width: 100%;
+		opacity: 0;
 		transition: 0.5s;
+		width: 100%;
 	}
 	&__description{
+		animation: 0.5s start-slide-up2 1.2s forwards paused;
 		font-size: 14px;
 		line-height: 30px;
 		margin: 0 auto;
+		opacity: 0;
 		width: 70%;
 	}
 }
@@ -202,15 +232,43 @@ body{
 		min-width: 100%;
 		&__item{
 			box-sizing: border-box;
-			width: calc(33.33% - 45px);
 			display: inline-block;
 			margin: 20px;
+			opacity: 0;
 			overflow: hidden;
+			width: calc(33.33% - 45px);
+			&:nth-child(1){
+				animation: 0.5s start-slide-up2 0.8s forwards paused;
+			}
+			&:nth-child(2){
+				animation: 0.5s start-slide-up2 1s forwards paused;
+			}
+			&:nth-child(3){
+				animation: 0.5s start-slide-up2 1.2s forwards paused;
+			}
+			&:nth-child(4){
+				animation: 0.5s start-slide-up2 1.4s forwards paused;
+			}
+			&:nth-child(5){
+				animation: 0.5s start-slide-up2 1.6s forwards paused;
+			}
+			&:nth-child(6){
+				animation: 0.5s start-slide-up2 1.8s forwards paused;
+			}
+			&:nth-child(7){
+				animation: 0.5s start-slide-up2 2s forwards paused;
+			}
+			&:nth-child(8){
+				animation: 0.5s start-slide-up2 2.2s forwards paused;
+			}
+			&:nth-child(9){
+				animation: 0.5s start-slide-up2 2.4s forwards paused;
+			}
 			&__img{
-				width: 100%;
 				filter: grayscale(100%);
 				-webkit-filter: grayscale(100%);
 				transition: 0.5s;
+				width: 100%;
 			}
 
 			&:hover .technology__list__item__img{
@@ -221,9 +279,19 @@ body{
 
 	}
 	&__button{
-		@include cv-button;
+		@include buttons();
+		animation: 0.5s start-slide-up2 2.6s forwards paused;
+		background-color: rgba(0,0,0, 0.8);
+		color: $secondColor;
+        &:hover{
+            background-color: rgba(0,0,0,1);
+            box-shadow: 0px 0px 20px 10px rgba(0,0,0, 0.3);
+        }
 	}
 
+}
+.projects{
+	@include header-of-section;
 }
 .after-hours{
 	@include header-of-section;
@@ -231,19 +299,19 @@ body{
 	padding-right: 0;
 	overflow: hidden;
 	&__list{
+		background-color: $baseColor;
 		box-sizing: border-box;
 		margin: 20px auto;
-		background-color: $baseColor;
 		position: relative;
 		width: 100%;
 		&::after{
 			border-bottom: 350px solid $secondColor;
 			border-right: 3000px solid transparent;
+			bottom: 0;
 			content: "";
 			display: block;
 			position: absolute;
 			right: -200px;
-			bottom: 0;
 			transition: 0.5s;
 			z-index: 4;
 		}
@@ -261,32 +329,54 @@ body{
 		&__item{
 			border-radius: 10px;
 			box-sizing: border-box;
-			width: calc(100% - 150px);
 			display: inline-block;
 			margin: 10px;
 			max-width: 1200px;
+			opacity: 0;
 			overflow: hidden;
 			position: relative;
+			width: calc(100% - 150px);
 			z-index: 7;
+			&:nth-child(1){
+				animation: 0.5s start-slide-up2 0.8s forwards paused;
+			}
+			&:nth-child(2){
+				animation: 0.5s start-slide-up2 1s forwards paused;
+			}
+			&:nth-child(3){
+				animation: 0.5s start-slide-up2 1.2s forwards paused;
+			}
+			&:nth-child(4){
+				animation: 0.5s start-slide-up2 1.4s forwards paused;
+			}
+			&:nth-child(5){
+				animation: 0.5s start-slide-up2 1.6s forwards paused;
+			}
+			&:nth-child(6){
+				animation: 0.5s start-slide-up2 1.8s forwards paused;
+			}
+			&:nth-child(7){
+				animation: 0.5s start-slide-up2 2s forwards paused;
+			}
 			&__img{
-				width: 100%;
 				filter: grayscale(100%);
 				-webkit-filter: grayscale(100%);
 				transition: 0.5s;
+				width: 100%;
 			}
 			&__description{
 				background-color: rgba(250,250,250,0.9);
-				display: block;
+				bottom: 0;
 				color: rgba(200, 187, 117, 1);
+				display: block;
 				font: 22px/26px 'Raleway', sans-serif;
-				padding: 15px;
-				width: 100%;
 				height: 50px;
-				transition: 0.5s;
+				left: 0;
+				padding: 15px;
 				position: absolute;
 				text-align: left;
-				bottom: 0;
-				left: 0;
+				transition: 0.5s;
+				width: 100%;
 				&--style{
 					display: block;
 					color: $baseColor;
@@ -309,19 +399,27 @@ body{
 	@include header-of-section();
 	margin-bottom: 100px;
 	&__description{
+		animation: 0.5s start-slide-up2 0.9s forwards paused;
 		color: $secondColor/1.5;
 		font: 14px/150% 'Ubuntu', sans-serif;
 		margin-top: 40px;
+		opacity: 0;
 	}
 	&__phone{
+		animation: 0.5s start-slide-up2 1.2s forwards paused;
 		font: bold 26px/150% 'Ubuntu', sans-serif;
 		margin-top: 30px;
+		opacity: 0;
 	}
 	&__email{
+		animation: 0.5s start-slide-up2 1.5s forwards paused;
 		font: 16px/150% 'Raleway', sans-serif;
+		opacity: 0
 	}
 	&__social-media{
+		animation: 0.5s start-slide-up2 1.8s forwards paused;
 		margin: 10px auto;
+		opacity: 0;
 		&__item{
 			display: inline-block;
 			font-size: 26px;
@@ -379,6 +477,7 @@ body{
 	}
 	.about,
 	.technology,
+	.projects,
 	.after-hours,
 	.contact{
 		&__header{
@@ -403,6 +502,7 @@ body{
 	}
 	.about,
 	.technology,
+	.projects,
 	.after-hours,
 	.contact{
 		&__header{
