@@ -71,7 +71,10 @@ $(document).ready(function() {
 			offset[i]=$(element).offset().top;
 		});
 	});
-	$(".navigation__list__item__link").click(function() {
+	$(".navigation__list__item__link").click(function(){
+		$.each($('.header-of-page, .about, .technology, .projects, .after-hours, .contact'), function(i, element){
+			offset[i]=$(element).offset().top;
+		})
 		var h1="";
 		if($(this).attr('href')=="#1"){h1=offset[0];}
 		else if($(this).attr('href')=="#2"){h1=offset[1];}
