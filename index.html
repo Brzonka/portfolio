@@ -12,20 +12,20 @@
 </head>
 <body>
 	<header class="header-of-page">
-		<section class="menu">
-			<div class="menu__hamburger">
-				<div class="menu__hamburger__item"></div>
-				<div class="menu__hamburger__item"></div>
-				<div class="menu__hamburger__item"></div>
-			</div>
-			<p class="menu__text">menu</p>
-			<p class="menu__text-name">jakub <span class="menu__text-name--color">babrzymąka</span></p>
-		</section>
 		<section class="prelude">
 			<h1 class="prelude__header">jakub<strong class="prelude__header--size1">[babrzymąka]</strong><strong class="prelude__header--size2">front-end developer</strong></h1>
-			<button class="prelude__button" type="button">dowiedz się wiecej</button>
+			<button class="prelude__button" type="button" title="Poznaj mnie lepiej!">dowiedz się wiecej</button>
 		</section>
 	</header>
+	<section class="menu">
+		<div class="menu__hamburger">
+			<div class="menu__hamburger__item"></div>
+			<div class="menu__hamburger__item"></div>
+			<div class="menu__hamburger__item"></div>
+		</div>
+		<p class="menu__text">menu</p>
+		<p class="menu__text-name">jakub <span class="menu__text-name--color">babrzymąka</span></p>
+	</section>
 	<nav class="navigation">
 		<ul class="navigation__list">
 			<li class="navigation__list__item"><a class="navigation__list__item__link" href="#1">Start</a></li>
@@ -47,17 +47,17 @@
 			<h2 class="technology__header">technologie</h2>
 			<h4 class="technology__header-bottom">co potrafię</h4>
 			<ul class="technology__list">
-				<li class="technology__list__item"><img class="technology__list__item__img" src="img/html5.png" alt="html5"></li>
-				<li class="technology__list__item"><img class="technology__list__item__img" src="img/css3.png" alt=""></li>
-				<li class="technology__list__item"><img class="technology__list__item__img" src="img/rwd.jpg" alt=""></li>
-				<li class="technology__list__item"><img class="technology__list__item__img" src="img/js.png" alt=""></li>
-				<li class="technology__list__item"><img  class="technology__list__item__img"src="img/jq.png" alt=""></li>
-				<li class="technology__list__item"><img class="technology__list__item__img" src="img/sass.png" alt="sass"></li>
-				<li class="technology__list__item"><img  class="technology__list__item__img"src="img/photoshop.png" alt=""></li>
-				<li class="technology__list__item"><img  class="technology__list__item__img"src="img/gulp.png" alt=""></li>
-				<li class="technology__list__item"><img  class="technology__list__item__img"src="img/git.png" alt=""></li>
+				<li class="technology__list__item"><img class="technology__list__item__img" src="img/html5.png" alt="Logo HTML5"></li>
+				<li class="technology__list__item"><img class="technology__list__item__img" src="img/css3.png" alt="logo CSS3"></li>
+				<li class="technology__list__item"><img class="technology__list__item__img" src="img/rwd.jpg" alt="Logo Responsive Web Design"></li>
+				<li class="technology__list__item"><img class="technology__list__item__img" src="img/js.png" alt="Logo Java Script"></li>
+				<li class="technology__list__item"><img  class="technology__list__item__img"src="img/jq.png" alt="Logo jQuery"></li>
+				<li class="technology__list__item"><img class="technology__list__item__img" src="img/sass.png" alt="Logo SASS"></li>
+				<li class="technology__list__item"><img  class="technology__list__item__img"src="img/photoshop.png" alt="Logo Photoshop"></li>
+				<li class="technology__list__item"><img  class="technology__list__item__img"src="img/gulp.png" alt="Logo Gulp"></li>
+				<li class="technology__list__item"><img  class="technology__list__item__img"src="img/git.png" alt="Logo Git"></li>
 			</ul>
-			<button class="technology__button" type="button">moje cv</button>
+			<button class="technology__button" type="button" title="Sprawdź moje CV!">moje cv</button>
 		</section>
 		<section class="projects">
 			<h2 class="projects__header">projekty</h2>
@@ -69,13 +69,33 @@
 			<h4 class="after-hours__header-bottom">fotografia</h4>
 			<ul class="after-hours__list">
 				<li class="after-hours__list__item">
-				<img class="after-hours__list__item__img" src="img/1.jpg" alt="html5"><p class="after-hours__list__item__description">Niemcy<span class="after-hours__list__item__description--style">Berlin</span></p></li>
-				<li class="after-hours__list__item"><img class="after-hours__list__item__img" src="img/2.jpg" alt=""><p class="after-hours__list__item__description">Niemcy<span class="after-hours__list__item__description--style">Berlin</span></p></li>
-				<li class="after-hours__list__item"><img class="after-hours__list__item__img" src="img/3.jpg" alt=""><p class="after-hours__list__item__description">Austria<span class="after-hours__list__item__description--style">Berlin</span></p></li>
-				<li class="after-hours__list__item"><img class="after-hours__list__item__img" src="img/4.jpg" alt=""><p class="after-hours__list__item__description">Hiszpania<span class="after-hours__list__item__description--style">Walencja</span></p></li>
-				<li class="after-hours__list__item"><img  class="after-hours__list__item__img"src="img/5.jpg" alt=""><p class="after-hours__list__item__description">Andora<span class="after-hours__list__item__description--style">Andora</span></p></li>
-				<li class="after-hours__list__item"><img class="after-hours__list__item__img" src="img/6.jpg" alt="sass"><p class="after-hours__list__item__description">Francja<span class="after-hours__list__item__description--style">Nicea</span></p></li>
-				<li class="after-hours__list__item"><img class="after-hours__list__item__img" src="img/7.jpg" alt="sass"><p class="after-hours__list__item__description">Lichtenstein<span class="after-hours__list__item__description--style">Vaduz-panorama</span></p></li>
+					<img class="after-hours__list__item__img" src="img/1.jpg" alt="Niemcy - Berlin, sklep z pamiątkami">
+					<p class="after-hours__list__item__description">Niemcy<span class="after-hours__list__item__description--style">Berlin</span></p>
+				</li>
+				<li class="after-hours__list__item">
+					<img class="after-hours__list__item__img" src="img/2.jpg" alt="Niemcy - Berlin, architektura nowoczesna">
+					<p class="after-hours__list__item__description">Niemcy<span class="after-hours__list__item__description--style">Berlin</span></p>
+				</li>
+				<li class="after-hours__list__item">
+					<img class="after-hours__list__item__img" src="img/3.jpg" alt="Austria - Attersee, poranek nad jeziorem Attersee">
+					<p class="after-hours__list__item__description">Austria<span class="after-hours__list__item__description--style">Attersee</span></p>
+				</li>
+				<li class="after-hours__list__item">
+					<img class="after-hours__list__item__img" src="img/4.jpg" alt="Hiszpania - Walencja, dzieci grające w piłkę nożną na placu przy zaniedbanej zabudowie">
+					<p class="after-hours__list__item__description">Hiszpania<span class="after-hours__list__item__description--style">Walencja</span></p>
+				</li>
+				<li class="after-hours__list__item">
+					<img  class="after-hours__list__item__img"src="img/5.jpg" alt="Andora - Andora, diabelski młyn, a w tle góry okryte chmurami">
+					<p class="after-hours__list__item__description">Andora<span class="after-hours__list__item__description--style">Andora</span></p>
+				</li>
+				<li class="after-hours__list__item">
+					<img class="after-hours__list__item__img" src="img/6.jpg" alt="Francja - Nicea, zachód słońca nad morzem, częściowo odbity w kałużach deszczu">
+					<p class="after-hours__list__item__description">Francja<span class="after-hours__list__item__description--style">Nicea</span></p>
+				</li>
+				<li class="after-hours__list__item">
+					<img class="after-hours__list__item__img" src="img/7.jpg" alt="Lichtenstein - Vadus, panorama miasta">
+					<p class="after-hours__list__item__description">Lichtenstein<span class="after-hours__list__item__description--style">Vaduz-panorama</span></p>
+				</li>
 			</ul>
 		</section>
 		<section class="contact">

@@ -1,37 +1,64 @@
+//Menu Fixed
 $(window).scroll(function(){
 	var height = $('.about').offset().top;
 	var height2 = $(window).scrollTop() + 50;
 	if (height2>=height){
 		$('.menu').addClass('menu--fixed').fadeIn();
+		$('.navigation--big-screen').css({"position":"fixed"});
 	}
 	else{
 		$('.menu').removeClass('menu--fixed');
+		$('.navigation--big-screen').css({"position":"absolute"});
 	}
 })
-
+//Page Translate
 $(document).ready(function(){
 	$('.menu__hamburger').click(function(){
 		if($('header').hasClass('page-translate')){
-			$('header, main, footer, nav').removeClass('page-translate');
+			$('header, main, footer, nav, .menu').removeClass('page-translate');
 			$(this).removeClass('menu__hamburger--close-style');
 		}
 		else if(($(window).trigger("scroll"))&&($('header').hasClass('page-translate'))){
-			$('header, main, footer, nav').removeClass('page-translate');
+			$('header, main, footer, nav, .menu').removeClass('page-translate');
 			$(this).removeClass('menu__hamburger--close-style');
 		}
 		else{
-			$('header, main, footer, nav').addClass('page-translate');
+			$('header, main, footer, nav, .menu').addClass('page-translate');
 			$(this).addClass('menu__hamburger--close-style');
 		}
 	})
 })
 $(window).scroll(function(){
 	if($('header').hasClass('page-translate')){
-			$('header, main, footer, nav').removeClass('page-translate');
+			$('header, main, footer, nav, .menu').removeClass('page-translate');
 			$('.menu__hamburger').removeClass('menu__hamburger--close-style');
 	}
 });
-
+//Big Screen Navigation
+$(document).ready(function(){
+	var width="";
+	width=$('.header-of-page').width();
+	$(window).resize(function(){
+		width=$('.header-of-page').width();
+			if(width>1000){
+			$('.navigation').addClass('navigation--big-screen');
+			$('.menu').addClass('menu--big-screen');
+		}
+		else if((width<1000)&&($('.navigation').hasClass('navigation--big-screen'))){
+			$('.navigation').removeClass('navigation--big-screen');
+			$('.menu').removeClass('menu--big-screen');
+		}
+	});
+	if(width>1000){
+		$('.navigation').addClass('navigation--big-screen');
+		$('.menu').addClass('menu--big-screen');
+	}
+	else if((width<1000)&&($('.navigation').hasClass('navigation--big-screen'))){
+		$('.navigation').removeClass('navigation--big-screen');
+		$('.menu').removeClass('menu--big-screen');
+	}
+})
+//Naviagtion Animation
 $(document).ready(function() {
 	var offset=[];
 	$.each($('.header-of-page, .about, .technology, .projects, .after-hours, .contact'), function(i, element){

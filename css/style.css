@@ -122,85 +122,6 @@ body {
   position: relative;
   width: 100%; }
 
-.menu {
-  animation: 4s start-slide-right;
-  position: absolute;
-  right: 0px;
-  top: 0px;
-  transition: 1s;
-  width: 100%; }
-  .menu__hamburger {
-    float: right;
-    margin: 35px;
-    padding: 5px;
-    position: relative;
-    transition: margin 0.3s;
-    z-index: 120; }
-    .menu__hamburger:hover {
-      cursor: pointer;
-      margin: 29px 35px; }
-    .menu__hamburger:hover .menu__hamburger__item {
-      margin: 6px 0; }
-    .menu__hamburger__item {
-      background-color: #fafafa;
-      border: 1px solid #fafafa;
-      border-radius: 1px;
-      height: 2px;
-      margin: 3px 0;
-      transition: 0.3s;
-      width: 30px; }
-    .menu__hamburger--close-style {
-      padding: 15px 5px;
-      margin: 25px 30px; }
-      .menu__hamburger--close-style .menu__hamburger__item:nth-child(1) {
-        margin: 0;
-        position: relative;
-        transform: rotate(45deg);
-        top: 5px;
-        width: 40px; }
-      .menu__hamburger--close-style .menu__hamburger__item:nth-child(2) {
-        display: none; }
-      .menu__hamburger--close-style .menu__hamburger__item:nth-child(3) {
-        margin: 0;
-        position: relative;
-        transform: rotate(-45deg);
-        top: 2px;
-        width: 40px; }
-      .menu__hamburger--close-style:hover {
-        margin: 25px 30px; }
-  .menu__text {
-    color: white;
-    float: right;
-    font: bold 20px/150% 'Ubuntu', sans-serif;
-    margin-top: 36px;
-    text-transform: uppercase; }
-  .menu__text-name {
-    color: white;
-    float: left;
-    font: bold 20px/150% 'Ubuntu', sans-serif;
-    letter-spacing: 2px;
-    margin: 18px 40px;
-    opacity: 0;
-    text-transform: uppercase; }
-    .menu__text-name--color {
-      color: #c8bb75; }
-  .menu--fixed {
-    background-color: black;
-    border-bottom: 1px solid #555555;
-    left: 0;
-    position: fixed;
-    top: 0;
-    transition: 1s;
-    z-index: 100; }
-    .menu--fixed .menu__hamburger {
-      margin: 18px 40px; }
-      .menu--fixed .menu__hamburger:hover {
-        margin: 12px 40px; }
-    .menu--fixed .menu__text {
-      margin: 20px -10px; }
-    .menu--fixed .menu__text-name {
-      opacity: 1; }
-
 .prelude {
   overflow: hidden;
   text-align: center; }
@@ -262,6 +183,97 @@ body {
     top: 0;
     transition: 0.5s; }
 
+.menu {
+  animation: 4s start-slide-right;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  transition: 1s;
+  width: 100%; }
+  .menu__hamburger {
+    float: right;
+    margin: 35px;
+    margin-bottom: 15px;
+    padding: 5px;
+    position: relative;
+    transition: margin 0.3s;
+    z-index: 120; }
+    .menu__hamburger:hover {
+      cursor: pointer;
+      margin: 29px 35px;
+      margin-bottom: 15px; }
+    .menu__hamburger:hover .menu__hamburger__item {
+      margin: 6px 0; }
+    .menu__hamburger__item {
+      background-color: #fafafa;
+      border: 1px solid #fafafa;
+      border-radius: 1px;
+      height: 2px;
+      margin: 3px 0;
+      transition: 0.3s;
+      width: 30px; }
+    .menu__hamburger--close-style {
+      padding: 15px 5px;
+      margin: 25px 30px;
+      margin-bottom: 15px; }
+      .menu__hamburger--close-style .menu__hamburger__item:nth-child(1) {
+        margin: 0;
+        position: relative;
+        transform: rotate(45deg);
+        top: 5px;
+        width: 40px; }
+      .menu__hamburger--close-style .menu__hamburger__item:nth-child(2) {
+        display: none; }
+      .menu__hamburger--close-style .menu__hamburger__item:nth-child(3) {
+        margin: 0;
+        position: relative;
+        transform: rotate(-45deg);
+        top: 2px;
+        width: 40px; }
+      .menu__hamburger--close-style:hover {
+        margin: 25px 30px;
+        margin-bottom: 15px; }
+  .menu__text {
+    color: white;
+    float: right;
+    font: bold 20px/150% 'Ubuntu', sans-serif;
+    margin-top: 36px;
+    text-transform: uppercase; }
+  .menu__text-name {
+    color: white;
+    float: left;
+    font: bold 20px/150% 'Ubuntu', sans-serif;
+    letter-spacing: 2px;
+    margin: 18px 40px;
+    opacity: 0;
+    text-transform: uppercase; }
+    .menu__text-name--color {
+      color: #c8bb75; }
+  .menu--fixed {
+    background-color: black;
+    border-bottom: 1px solid #555555;
+    border-right: 1px solid black;
+    left: 0;
+    position: fixed;
+    top: 0;
+    transition: 1s;
+    z-index: 100; }
+    .menu--fixed .menu__hamburger {
+      margin: 18px 40px; }
+      .menu--fixed .menu__hamburger:hover {
+        margin: 12px 40px; }
+    .menu--fixed .menu__text {
+      margin: 20px -10px; }
+    .menu--fixed .menu__text-name {
+      opacity: 1; }
+  .menu--big-screen .menu__hamburger {
+    display: none; }
+  .menu--big-screen .menu__text {
+    display: none; }
+
+.menu.menu--fixed .menu__hamburger--close-style {
+  margin: 15px 40px; }
+
 .navigation {
   background-color: black;
   border-left: 1px solid #555555;
@@ -273,7 +285,7 @@ body {
   top: 0;
   transition: 1s;
   width: 250px;
-  z-index: 9999; }
+  z-index: 89; }
   .navigation__list {
     width: 100%; }
     .navigation__list__item {
@@ -289,6 +301,38 @@ body {
         .navigation__list__item__link:hover {
           color: #beb16b;
           letter-spacing: 5px; }
+  .navigation--big-screen {
+    background: none;
+    border-left: none;
+    box-sizing: border-box;
+    height: auto;
+    padding-top: 0px;
+    position: absolute;
+    right: 0;
+    top: 20px;
+    transition: 1s;
+    width: auto;
+    z-index: 109; }
+    .navigation--big-screen .navigation__list {
+      background: none;
+      margin-right: 40px;
+      width: 100%; }
+      .navigation--big-screen .navigation__list__item {
+        background: none;
+        border-bottom: none;
+        display: inline-block;
+        margin: 0 5px;
+        width: auto; }
+        .navigation--big-screen .navigation__list__item__link {
+          background: none;
+          color: white;
+          font: 12px/30px 'Raleway', sans-serif;
+          letter-spacing: 2px;
+          text-transform: uppercase;
+          transition: 0.5s; }
+          .navigation--big-screen .navigation__list__item__link:hover {
+            color: #beb16b;
+            letter-spacing: 5px; }
 
 .about {
   box-sizing: border-box;
