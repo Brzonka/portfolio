@@ -239,10 +239,11 @@ body{
 	position: fixed;
 	right: -250px;
 	top: 0;
-	transition: 1s;
+	transition: transform 1s;
 	width: 250px;
 	z-index: 89;
 	&__list{	
+		margin-right: 0;
 		width: 100%;
 		&__item{
 			border-bottom: 1px solid #555555;
@@ -262,6 +263,7 @@ body{
 		}
 	}
 	&--big-screen{
+		animation: 4s start-slide-right;
 		background: none;
 		border-left: none;
 		box-sizing: border-box;
@@ -269,9 +271,8 @@ body{
 		padding-top: 0px;
 		position: absolute;
 		right: 0;
-		top: 20px;
-		transition: 1s;
-		width: auto;
+		top: 50px;
+		width: 100%;
 		z-index: 109;
 		& .navigation__list{
 			background: none;
