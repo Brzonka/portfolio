@@ -336,6 +336,10 @@ body {
           .navigation--big-screen .navigation__list__item__link:hover {
             color: #beb16b;
             letter-spacing: 5px; }
+    .navigation--big-screen--fixed {
+      position: fixed;
+      top: 20px;
+      width: auto; }
 
 .about {
   box-sizing: border-box;

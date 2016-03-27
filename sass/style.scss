@@ -300,6 +300,11 @@ body{
 				}
 			}
 		}
+		&--fixed{
+			position: fixed;
+			top: 20px;
+			width: auto;
+		}
 	}
 }
 .about{
