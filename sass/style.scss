@@ -212,6 +212,7 @@ body{
 			}
 			&__text-name{
 				opacity: 1;
+				display: none;
 			}
 		}
 	}
@@ -569,6 +570,15 @@ body{
 		&__header{
 			font-size: 26px;
 			line-height: 120%;
+		}
+	}
+}
+@media (min-width: 600px){
+	.menu--fixed{
+		& .menu{
+			&__text-name{
+				display: inline;
+			}
 		}
 	}
 }

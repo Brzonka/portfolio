@@ -265,7 +265,8 @@ body {
     .menu--fixed .menu__text {
       margin: 20px -10px; }
     .menu--fixed .menu__text-name {
-      opacity: 1; }
+      opacity: 1;
+      display: none; }
   .menu--big-screen .menu__hamburger {
     display: none; }
   .menu--big-screen .menu__text {
@@ -706,6 +707,9 @@ body {
   .prelude__header {
     font-size: 26px;
     line-height: 120%; } }
+@media (min-width: 600px) {
+  .menu--fixed .menu__text-name {
+    display: inline; } }
 @media (min-width: 650px) {
   .prelude__header {
     font-size: 30px;

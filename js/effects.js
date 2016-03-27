@@ -3,7 +3,7 @@ $(window).scroll(function(){
 	var height = $('.about').offset().top;
 	var height2 = $(window).scrollTop() + 50;
 	if (height2>=height){
-		$('.menu').addClass('menu--fixed').fadeIn();
+		$('.menu').addClass('menu--fixed');
 		$('.navigation--big-screen').css({"position":"fixed","top":"20px", "width": "auto"});
 	}
 	else{
