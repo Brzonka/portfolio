@@ -87,11 +87,8 @@ body{
 		opacity: 0;
 
 	}
-	&::after{
-		animation: 1s start-slide-bg-down forwards;
-		border-bottom: 200px solid $secondColor;
-		border-right: 2500px solid transparent;
-		bottom: 0;
+	&::after,
+	&::before{
 		content: "";
 		display: block;
 		opacity: 0;
@@ -99,18 +96,19 @@ body{
 		right: 0;
 		transition: 0.5s;
 	}
+	&::after{
+		animation: 1s start-slide-bg-down forwards;
+		border-bottom: 200px solid $secondColor;
+		border-right: 2500px solid transparent;
+		bottom: 0;
+
+	}
 	&::before{
 		animation: 1s start-slide-bg-up forwards;
 		border-top: 100px solid $secondColor;
 		border-right: 2500px solid transparent;
-		content: "";
-		display: block;
 		margin: 0;
-		opacity: 0;
-		position: absolute;
-		right: 0;
 		top: 0;
-		transition: 0.5s;
 	}
 }
 .menu{
@@ -219,16 +217,13 @@ body{
 	}
 	&--big-screen{
 		& .menu{
-			&__hamburger{
-				display: none;
-			}
+			&__hamburger,
 			&__text{
 				display: none;
 			}
 		}
 	}
 }
-
 .menu.menu--fixed .menu__hamburger--close-style{
 		margin: 15px 40px;
 }
@@ -324,7 +319,7 @@ body{
 		animation: 0.7s start-slide-up2 1.2s forwards paused;
 		font-size: 14px;
 		line-height: 30px;
-		margin: 0 auto;
+		margin: 20px auto;
 		max-width: 1200px;
 		opacity: 0;
 		width: 70%;
