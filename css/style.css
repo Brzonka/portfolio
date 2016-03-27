@@ -60,8 +60,7 @@ a {
     position: absolute;
     right: 80%; }
   100% {
-    opacity: 1;
-    right: 0px; } }
+    opacity: 1; } }
 @keyframes start-slide-bg-down {
   from {
     bottom: -150px; }
@@ -118,7 +117,7 @@ body {
   width: 100%; }
 
 .menu {
-  animation: 4s start-slide-right forwards;
+  animation: 4s start-slide-right;
   position: absolute;
   right: 0px;
   top: 0px;
@@ -217,7 +216,7 @@ body {
       font-size: 80%;
       opacity: 0; }
   .prelude__button {
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.85);
     border: none;
     border-radius: 20px;
     color: black;
@@ -403,7 +402,7 @@ body {
         filter: grayscale(0%);
         -webkit-filter: grayscale(0%); }
   .technology__button {
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.85);
     border: none;
     border-radius: 20px;
     color: black;
