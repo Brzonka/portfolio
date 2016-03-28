@@ -22,7 +22,7 @@ gulp.task('autoprefix', function(){
 gulp.task('watch', function(){
 	var server=livereload();
 	gulp.watch('js/effects.js', ['scripts']);
-	gulp.watch('sass/*.scss', ['styles']);
+	gulp.watch('sass/*', ['styles']);
 	gulp.watch('build/css/*.css', ['autoprefix']);
 });
 
