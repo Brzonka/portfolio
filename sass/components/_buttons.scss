@@ -1,0 +1,17 @@
+@import "../helpers/mixins";
+.prelude__button{
+	@include buttons();
+	animation: 1s start-button 2.5s forwards;
+	opacity: 0;
+}
+.technology__button{
+	@include buttons();
+	animation: 0.8s start-slide-up2 2.6s forwards paused;
+	background-color: rgba(0,0,0, 0.8);
+	color: $secondColor;
+	opacity: 0;
+    &:hover{
+        background-color: rgba(0,0,0,1);
+        box-shadow: 0px 0px 20px 10px rgba(0,0,0, 0.3);
+    }
+}

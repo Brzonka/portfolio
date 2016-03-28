@@ -1,0 +1,22 @@
+.about{
+	padding-left:0;
+	padding-right: 0;
+	position: relative;
+	&__photo{
+		animation: 1.2s start-slide-up2 0.9s forwards paused;
+		display: block;
+		margin-top: -30px;
+		opacity: 0;
+		transition: 0.5s;
+		width: 100%;
+	}
+	&__description{
+		animation: 0.7s start-slide-up2 1.2s forwards paused;
+		font-size: 14px;
+		line-height: 30px;
+		margin: 20px auto;
+		max-width: 1200px;
+		opacity: 0;
+		width: 70%;
+	}
+}

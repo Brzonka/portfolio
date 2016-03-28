@@ -1,0 +1,24 @@
+.footer-of-page{
+	animation: 1s start-slide-down 2s forwards paused;
+	opacity: 0;
+	position: relative;
+	&__text{
+		background-color: $baseColor;
+		color: $secondColor;
+		font: 14px/26px 'Fira Mono', sans-serif;
+		height: 40px;
+		letter-spacing: 2px;
+		text-align: center;
+		&::before{
+		border-bottom: 100px solid $baseColor;
+		border-right: 2500px solid transparent;
+		color: $secondColor;
+		content: "";
+		display: block;
+		position: absolute;
+		right: 0;
+		top: -100px;
+		transition: 0.5s;
+		}
+	}
+}

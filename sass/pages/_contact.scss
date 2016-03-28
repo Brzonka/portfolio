@@ -1,0 +1,42 @@
+.contact{
+	margin-bottom: 100px;
+	&__description{
+		animation: 0.5s start-slide-up2 0.9s forwards paused;
+		color: $secondColor/1.5;
+		font: 14px/150% 'Ubuntu', sans-serif;
+		margin-top: 40px;
+		opacity: 0;
+	}
+	&__phone{
+		animation: 0.5s start-slide-up2 1.2s forwards paused;
+		font: bold 26px/150% 'Ubuntu', sans-serif;
+		margin-top: 30px;
+		opacity: 0;
+	}
+	&__email{
+		animation: 0.5s start-slide-up2 1.5s forwards paused;
+		font: 16px/150% 'Raleway', sans-serif;
+		opacity: 0
+	}
+	&__social-media{
+		animation: 0.5s start-slide-up2 1.8s forwards paused;
+		margin: 10px auto;
+		opacity: 0;
+		&__item{
+			display: inline-block;
+			font-size: 26px;
+			&__link{
+				color: $baseColor;
+				content: "";
+				padding:15px;
+				transition: 0.5s;
+				:hover{
+					color: #3b5998;
+				}
+			}
+
+
+		}
+	}
+
+}

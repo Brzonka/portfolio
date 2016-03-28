@@ -1,0 +1,15 @@
+@import "../helpers/mixins";
+.header,
+.main,
+.footer{
+	&-of-page{
+		transition: 1s;
+	}
+}
+.about,
+.technology,
+.projects,
+.after-hours,
+.contact{
+	@include header-of-section();
+}
