@@ -389,7 +389,7 @@ a {
   .prelude::before {
     -webkit-animation: 1s start-slide-bg-up forwards;
             animation: 1s start-slide-bg-up forwards;
-    border-top: 0px solid white;
+    border-top: 100px solid white;
     border-right: 2500px solid transparent;
     margin: 0;
     top: 0; }
