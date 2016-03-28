@@ -141,3 +141,16 @@ $(document).ready(function() {
 	})
 
 });
+//Gallery Open
+$(document).ready(function(){
+	$('.after-hours__list__item').click(function(){
+		if($(this).hasClass('after-hours__list__item--open')){
+			$(this).removeClass('after-hours__list__item--open');
+		}
+		else{
+			
+			$('.after-hours__list__item').removeClass('after-hours__list__item--open');
+			$(this).addClass('after-hours__list__item--open');
+		}
+	})
+})

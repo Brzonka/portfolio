@@ -66,6 +66,10 @@ a {
     opacity: 0;
     position: absolute;
     right: 80%; }
+  92% {
+    opacity: 1;
+    position: absolute;
+    right: -1%; }
   100% {
     opacity: 1; } }
 @keyframes start-slide-right {
@@ -77,6 +81,10 @@ a {
     opacity: 0;
     position: absolute;
     right: 80%; }
+  92% {
+    opacity: 1;
+    position: absolute;
+    right: -1%; }
   100% {
     opacity: 1; } }
 @-webkit-keyframes start-slide-bg-down {
@@ -668,7 +676,7 @@ body {
       content: "";
       display: block;
       position: absolute;
-      right: -1000px;
+      right: -500px;
       top: 0;
       -webkit-transition: 0.5s;
       transition: 0.5s;
@@ -677,10 +685,13 @@ body {
       border-radius: 10px;
       box-sizing: border-box;
       display: inline-block;
+      height: 80px;
       margin: 10px;
       max-width: 1200px;
       opacity: 0;
       overflow: hidden;
+      -webkit-transition: height 1s;
+      transition: height 1s;
       position: relative;
       width: calc(100% - 150px);
       z-index: 7; }
@@ -705,6 +716,12 @@ body {
       .after-hours__list__item:nth-child(7) {
         -webkit-animation: 0.5s start-slide-up2 2s forwards paused;
                 animation: 0.5s start-slide-up2 2s forwards paused; }
+      .after-hours__list__item:nth-child(8) {
+        -webkit-animation: 0.5s start-slide-up2 2.2s forwards paused;
+                animation: 0.5s start-slide-up2 2.2s forwards paused; }
+      .after-hours__list__item:nth-child(9) {
+        -webkit-animation: 0.5s start-slide-up2 2.4s forwards paused;
+                animation: 0.5s start-slide-up2 2.4s forwards paused; }
       .after-hours__list__item__img {
         filter: grayscale(100%);
         -webkit-filter: grayscale(100%);
@@ -729,11 +746,17 @@ body {
           display: block;
           color: black;
           font-size: 14px; }
+      .after-hours__list__item:hover {
+        cursor: pointer; }
       .after-hours__list__item:hover .after-hours__list__item__img {
         filter: grayscale(0%);
         -webkit-filter: grayscale(0%); }
       .after-hours__list__item:hover .after-hours__list__item__description {
         opacity: 0; }
+      .after-hours__list__item--open {
+        height: auto;
+        -webkit-transition: 0.5s;
+        transition: 0.5s; }
 
 .contact {
   box-sizing: border-box;
