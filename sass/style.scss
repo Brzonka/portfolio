@@ -8,7 +8,6 @@ $secondColor: rgba(255,255,255,1);
 @keyframes start-slide-right{
 	0%{opacity: 0;position: absolute; right: 80%;}
 	70%{opacity: 0;position: absolute; right: 80%;}
-	92%{opacity: 1;position: absolute; right: -1%;}
 	100%{opacity: 1;}
 }
 @keyframes start-slide-bg-down{
@@ -408,10 +407,12 @@ body{
 		background-color: $secondColor;
 		box-sizing: border-box;
 		margin: 20px auto;
+		padding-top: 30px;
 		position: relative;
+		transition: 1s;
 		width: 100%;
 		&::after{
-			border-bottom: 350px solid $secondColor;
+			border-bottom: 150px solid $secondColor;
 			border-right: 3000px solid transparent;
 			bottom: 0;
 			content: "";
@@ -427,7 +428,7 @@ body{
 			content: "";
 			display: block;
 			position: absolute;
-			right: -500px;
+			right: 0;
 			top: 0;
 			transition: 0.5s;
 			z-index: 4;
