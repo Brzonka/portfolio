@@ -126,7 +126,7 @@ $(document).ready(function(){
 			$('.technology__header, .technology__header-bottom, .technology__list__item, .technology__button').css({"animation-play-state":"running"});}
 
 		if((height>(offset[3]-height_window/2))&&(height<(offset[4]-height_window/4))){
-			$('.projects__header, .projects__header-bottom, .projects__description').css({"animation-play-state":"running"});}
+			$('.projects__header, .projects__header-bottom, .projects__description, .projects__high-five__description, .projects__high-five__hand ').css({"animation-play-state":"running"});}
 
 		if((height>(offset[4]-height_window/2))&&(height<(offset[5]-height_window/4))){
 			$('.after-hours__header, .after-hours__header-bottom, .after-hours__list, .after-hours__list__item').css({"animation-play-state":"running"});}
@@ -138,13 +138,24 @@ $(document).ready(function(){
 
 //Gallery Open
 	$('.after-hours__list__item').click(function(){
-		if($(this).hasClass('after-hours__list__item--open')){
-			$(this).removeClass('after-hours__list__item--open');
+		var height_img = "";
+		height_img=$(this).children().first().height();
+		if($(this).hasClass('.after-hours__list__item--open')){
+			$(this).removeClass('.after-hours__list__item--open');
+			$('.after-hours__list__item').animate({height: "80px"}, 500);
+		}
+		else if($('.after-hours__list__item').not("this").hasClass('.after-hours__list__item--open')){
+			$('.after-hours__list__item').not("this").removeClass('.after-hours__list__item--open');
+			$('.after-hours__list__item').not("this").animate({height: "80px"}, 500);
+			$(this).addClass('.after-hours__list__item--open');
+			$(this).animate({height: height_img}, 500);
 		}
 		else{
-			
-			$('.after-hours__list__item').removeClass('after-hours__list__item--open');
-			$(this).addClass('after-hours__list__item--open');
-		}
+			$(this).addClass('.after-hours__list__item--open');
+			$(this).animate({height: height_img}, 500);}
+	})
+//Bang
+$('.projects__high-five__hand').click(function(){
+		$('.projects__high-five__bang').hide().fadeIn(100).fadeOut(400);
 	})
 })

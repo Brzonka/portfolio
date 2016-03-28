@@ -39,7 +39,6 @@
 			max-width: 1200px;
 			opacity: 0;
 			overflow: hidden;
-			transition: height 1s;
 			position: relative;
 			width: calc(100% - 150px);
 			z-index: 7;
@@ -105,10 +104,6 @@
 			}
 			&:hover .after-hours__list__item__description{
 				opacity: 0;
-			}
-			&--open{
-				height: auto;
-				transition: 0.5s;
 			}
 		}
 	}
