@@ -1,43 +1,43 @@
+$(document).ready(function(){
 //Menu Fixed
-$(window).scroll(function(){
-	var height = $('.about').offset().top;
-	var height2 = $(window).scrollTop() + 50;
-	var width_window = $(window).width();
-	if (height2>=height){
-		$('.menu').addClass('menu--fixed');
-	}
-	if ((height2>=height)&&(width_window>1000)){
-		$('.navigation').addClass('navigation--big-screen--fixed');
-	}
-	if (width_window<1000){
-		$('.navigation').removeClass('navigation--big-screen--fixed');
-	}
-	if (height2<height){
-		$('.menu').removeClass('menu--fixed');
-		$('.navigation').removeClass('navigation--big-screen--fixed');
-	}
-})
-$(window).resize(function(){
-	var height = $('.about').offset().top;
-	var height2 = $(window).scrollTop() + 50;
-	var width_window = $(window).width();
-	if (height2>=height){
-		$('.menu').addClass('menu--fixed');
-	}
-	if ((height2>=height)&&(width_window>1000)){
-		$('.navigation').addClass('navigation--big-screen--fixed');
-	}
-	if (width_window<1000){
-		$('.navigation').removeClass('navigation--big-screen--fixed');
-	}
-	if (height2<height){
-		$('.menu').removeClass('menu--fixed');
-		$('.navigation').removeClass('navigation--big-screen--fixed');
-	}
-})
+	$(window).scroll(function(){
+		var height = $('.about').offset().top;
+		var height2 = $(window).scrollTop() + 50;
+		var width_window = $(window).width();
+		if (height2>=height){
+			$('.menu').addClass('menu--fixed');
+		}
+		if ((height2>=height)&&(width_window>1000)){
+			$('.navigation').addClass('navigation--big-screen--fixed');
+		}
+		if (width_window<1000){
+			$('.navigation').removeClass('navigation--big-screen--fixed');
+		}
+		if (height2<height){
+			$('.menu').removeClass('menu--fixed');
+			$('.navigation').removeClass('navigation--big-screen--fixed');
+		}
+	})
+	$(window).resize(function(){
+		var height = $('.about').offset().top;
+		var height2 = $(window).scrollTop() + 50;
+		var width_window = $(window).width();
+		if (height2>=height){
+			$('.menu').addClass('menu--fixed');
+		}
+		if ((height2>=height)&&(width_window>1000)){
+			$('.navigation').addClass('navigation--big-screen--fixed');
+		}
+		if (width_window<1000){
+			$('.navigation').removeClass('navigation--big-screen--fixed');
+		}
+		if (height2<height){
+			$('.menu').removeClass('menu--fixed');
+			$('.navigation').removeClass('navigation--big-screen--fixed');
+		}
+	})
 
 //Page Translate
-$(document).ready(function(){
 	$('.menu__hamburger').click(function(){
 		if($('header').hasClass('page-translate')){
 			$('header, main, footer, nav, .menu').removeClass('page-translate');
@@ -52,21 +52,19 @@ $(document).ready(function(){
 			$(this).addClass('menu__hamburger--close-style');
 		}
 	})
-})
-$(window).scroll(function(){
-	if($('header').hasClass('page-translate')){
-			$('header, main, footer, nav, .menu').removeClass('page-translate');
-			$('.menu__hamburger').removeClass('menu__hamburger--close-style');
-	}
-});
-$(window).resize(function(){
-	if($('header').hasClass('page-translate')){
-			$('header, main, footer, nav, .menu').removeClass('page-translate');
-			$('.menu__hamburger').removeClass('menu__hamburger--close-style');
-	}
-});
+	$(window).scroll(function(){
+		if($('header').hasClass('page-translate')){
+				$('header, main, footer, nav, .menu').removeClass('page-translate');
+				$('.menu__hamburger').removeClass('menu__hamburger--close-style');
+		}
+	});
+	$(window).resize(function(){
+		if($('header').hasClass('page-translate')){
+				$('header, main, footer, nav, .menu').removeClass('page-translate');
+				$('.menu__hamburger').removeClass('menu__hamburger--close-style');
+		}
+	});
 //Big Screen Navigation
-$(document).ready(function(){
 	var width="";
 	width=$('.header-of-page').width();
 	$(window).resize(function(){
@@ -90,9 +88,7 @@ $(document).ready(function(){
 		$('.navigation').removeClass('navigation--big-screen');
 		$('.menu').removeClass('menu--big-screen');
 	}
-})
 //Naviagtion Animation
-$(document).ready(function() {
 	var offset=[];
 	$.each($('.header-of-page, .about, .technology, .projects, .after-hours, .contact'), function(i, element){
 			offset[i]=$(element).offset().top;
@@ -140,9 +136,7 @@ $(document).ready(function() {
 
 	})
 
-});
 //Gallery Open
-$(document).ready(function(){
 	$('.after-hours__list__item').click(function(){
 		if($(this).hasClass('after-hours__list__item--open')){
 			$(this).removeClass('after-hours__list__item--open');

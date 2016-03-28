@@ -1,4 +1,3 @@
-
 .after-hours{
 	padding-left: 0;
 	padding-right: 0;
@@ -12,27 +11,24 @@
 		position: relative;
 		transition: 1s;
 		width: 100%;
-		&::after{
-			border-bottom: 150px solid $secondColor;
-			border-right: 3000px solid transparent;
-			bottom: 0;
-			content: "";
-			display: block;
-			position: absolute;
-			right: -200px;
-			transition: 0.5s;
-			z-index: 4;
-		}
+		&::after,
 		&::before{
-			border-top: 500px solid $secondColor;
 			border-right: 3500px solid transparent;
 			content: "";
 			display: block;
 			position: absolute;
-			right: 0;
-			top: 0;
 			transition: 0.5s;
 			z-index: 4;
+		}
+		&::after{
+			border-bottom: 150px solid $secondColor;
+			bottom: 0;
+			right: -200px;
+		}
+		&::before{
+			border-top: 500px solid $secondColor;
+			right: 0;
+			top: 0;
 		}
 		&__item{
 			border-radius: 10px;
@@ -115,6 +111,5 @@
 				transition: 0.5s;
 			}
 		}
-
 	}
 }

@@ -31,6 +31,10 @@
 	from{background-color: &secondColor;}
 	to{background-color: #000000;}
 }
+@keyframes open{
+	from{height: 80px;}
+	to{height: auto;}
+}
 .page-translate{
 	transform: translateX(-250px);
 }
