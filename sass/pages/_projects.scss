@@ -1,0 +1,28 @@
+.projects{
+	&__description{
+		@extend .about__description;
+	}
+	&__high-five{
+		margin-top: 50px;
+		position: relative;
+		&__description{
+			@extend .about__description;
+			animation-delay: 1.5s;
+			margin-top: 30px;
+		}
+		&__hand{
+			animation: 0.7s start-slide-up2 1.8s forwards paused;
+			opacity: 0;
+			&:hover{
+				cursor: url(../img/hand1.png) 50 50, auto;
+			}
+		}
+		&__bang{
+			top: -20px;
+			left: 50%;
+			display: none;
+			margin-left: -100px;
+			position: absolute;
+		}
+	}
+}
