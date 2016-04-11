@@ -1,35 +1,15 @@
 .after-hours{
+	@include header-of-section;
 	padding-left: 0;
 	padding-right: 0;
 	overflow: hidden;
 	&__list{
-		animation: 2s start-color 1.2s forwards paused;
-		background-color: $secondColor;
 		box-sizing: border-box;
 		margin: 20px auto;
 		padding-top: 30px;
 		position: relative;
 		transition: 1s;
 		width: 100%;
-		&::after,
-		&::before{
-			border-right: 3500px solid transparent;
-			content: "";
-			display: block;
-			position: absolute;
-			transition: 0.5s;
-			z-index: 4;
-		}
-		&::after{
-			border-bottom: 150px solid $secondColor;
-			bottom: 0;
-			right: -200px;
-		}
-		&::before{
-			border-top: 500px solid $secondColor;
-			right: 0;
-			top: 0;
-		}
 		&__item{
 			border-radius: 10px;
 			box-sizing: border-box;
@@ -37,37 +17,36 @@
 			height: 80px;
 			margin: 10px;
 			max-width: 1200px;
-			opacity: 0;
 			overflow: hidden;
 			position: relative;
-			width: calc(100% - 150px);
+			width: calc(100% - 80px);
 			z-index: 7;
 			&:nth-child(1){
-				animation: 0.5s start-slide-up2 0.8s forwards paused;
+				animation: 0.5s start-slide-up2 0.8s backwards paused;
 			}
 			&:nth-child(2){
-				animation: 0.5s start-slide-up2 1s forwards paused;
+				animation: 0.5s start-slide-up2 1s backwards paused;
 			}
 			&:nth-child(3){
-				animation: 0.5s start-slide-up2 1.2s forwards paused;
+				animation: 0.5s start-slide-up2 1.2s backwards paused;
 			}
 			&:nth-child(4){
-				animation: 0.5s start-slide-up2 1.4s forwards paused;
+				animation: 0.5s start-slide-up2 1.4s backwards paused;
 			}
 			&:nth-child(5){
-				animation: 0.5s start-slide-up2 1.6s forwards paused;
+				animation: 0.5s start-slide-up2 1.6s backwards paused;
 			}
 			&:nth-child(6){
-				animation: 0.5s start-slide-up2 1.8s forwards paused;
+				animation: 0.5s start-slide-up2 1.8s backwards paused;
 			}
 			&:nth-child(7){
-				animation: 0.5s start-slide-up2 2s forwards paused;
+				animation: 0.5s start-slide-up2 2s backwards paused;
 			}
 			&:nth-child(8){
-				animation: 0.5s start-slide-up2 2.2s forwards paused;
+				animation: 0.5s start-slide-up2 2.2s backwards paused;
 			}
 			&:nth-child(9){
-				animation: 0.5s start-slide-up2 2.4s forwards paused;
+				animation: 0.5s start-slide-up2 2.4s backwards paused;
 			}
 			&__img{
 				filter: grayscale(100%);

@@ -2,45 +2,26 @@
 	overflow: hidden;
 	text-align: center;
 	&__header{
-		animation: 1s start-slide-up 0.5s forwards;
+		animation: 1s start-slide-up 0.5s backwards;
 		color: $secondColor;
-		font: bold 20px/40px 'Fira Mono', sans-serif;
+		font: 'Fira Mono', sans-serif;
+		@include font-size($h1-font-sizes);
+		font-weight: bold;
 		margin-top: 30vh;
-		opacity: 0;
 		text-transform: uppercase;
 		&--size1{
-			animation: 1s start-slide-up 1s forwards;
+			animation: 1s start-slide-up 1s backwards;
 			display: block;
 			font-size: 160%;
-			opacity: 0;
 		}
 		&--size2{
-			animation: 1s start-slide-up 1.5s forwards;
+			animation: 1s start-slide-up 1.5s backwards;
 			display: block;
 			font-size: 80%;
-			opacity: 0;
 		}
 	}
-	&::after,
-	&::before{
-		content: "";
-		display: block;
-		opacity: 0;
-		position: absolute;
-		right: 0;
-		transition: 0.5s;
-	}
-	&::after{
-		animation: 1s start-slide-bg-down forwards;
-		border-bottom: 200px solid $secondColor;
-		border-right: 2500px solid transparent;
-		bottom: 0;
-	}
-	&::before{
-		animation: 1s start-slide-bg-up forwards;
-		border-top: 100px solid $secondColor;
-		border-right: 2500px solid transparent;
-		margin: 0;
-		top: 0;
+	&__button{
+		@extend %buttons;
+		animation: 1s start-button 2.5s backwards;
 	}
 }

@@ -1,58 +1,83 @@
 // ----------------
 //     MIXINS
 // ----------------
-$baseColor: rgba(0,0,0,1);
-$secondColor: rgba(255,255,255,1);
-@mixin header-of-section(){
+
+//size
+@mixin size($width, $height: $width) {
+      width: $width;
+      height: $height;
+}
+
+//position
+@mixin position($position, $args) {
+  @each $o in top right bottom left {
+        $i: index($args, $o);
+
+    @if $i and $i + 1 <= length($args) and type-of(nth($args, $i + 1)) == number  {
+          #{$o}: nth($args, $i + 1);
+    }
+  }
+
+  position: $position;
+}
+
+@mixin absolute($args) {
+        @include position(absolute, $args);
+}
+
+@mixin fixed($args) {
+        @include position(fixed, $args);
+}
+
+@mixin relative($args) {
+        @include position(relative, $args);
+}
+//font size
+@mixin font-size($fs-map, $fs-breakpoints: $breakpoints) {
+  @each $fs-breakpoint, $fs-font-size in $fs-map {
+    @if $fs-breakpoint == 'null' {
+      font-size: $fs-font-size;
+    }
+    @else {
+      @if map-has-key($fs-breakpoints, $fs-breakpoint) {
+        $fs-breakpoint: map-get($fs-breakpoints, $fs-breakpoint);
+      }
+      @media screen and (min-width: $fs-breakpoint) {
+        font-size: $fs-font-size;
+      }
+    }
+  }
+}
+
+@mixin header-of-section{
     box-sizing: border-box;
     padding: 80px 15px;
     text-align: center;
     &__header{
-        animation: 0.8s start-slide-up2 forwards paused;
-        font: normal normal bold 26px/150% 'Ubuntu', sans-serif;
+        animation: 0.8s start-slide-up2 backwards paused;
+        @include font-size($h2-font-sizes);
+        font-weight: bold;
+        line-height: 150%;
         letter-spacing: 3px;
-        opacity: 0;
         text-transform: uppercase;
-}
-
+    }
     &__header-bottom{
-        animation: 0.8s start-slide-up2 0.3s forwards paused;
-        color: #555555;
-        font: normal normal bold 12px/150% 'Ubuntu', sans-serif;
+        animation: 0.8s start-slide-up2 0.3s backwards paused;
+        color: $text-color-dark;
         letter-spacing: 2px;
-        opacity: 0;
         text-transform: uppercase;
         &::after{
-            animation: 0.5s start-slide-up2 0.6s forwards;
+            animation: 0.5s start-slide-up2 0.6s backwards;
             background: $secondColor;
-            background: -webkit-linear-gradient(to left,$secondColor,rgba(0,0,0,1),$secondColor);
-            background: -o-linear-gradient(to left,$secondColor,rgba(0,0,0,1),$secondColor);
-            background: -moz-linear-gradient(to left,$secondColor,rgba(0,0,0,1),$secondColor);
-            background: linear-gradient(to left,$secondColor,rgba(0,0,0,1),$secondColor); 
+            background: -webkit-linear-gradient(to left,$no-color,rgba(0,0,0,1),$no-color);
+            background: -o-linear-gradient(to left,$no-color,rgba(0,0,0,1),$no-color);
+            background: -moz-linear-gradient(to left,$no-color,rgba(0,0,0,1),$no-color);
+            background: linear-gradient(to left,$no-color,rgba(0,0,0,1),$no-color); 
             content: "";
             display:block;
             height: 2px;
-            opacity: 0;
             margin: 15px auto;
             width: 150px;
         }
     }
 }
-@mixin buttons(){
-        background-color: rgba(255,255,255, 0.85);
-        border: none;
-        border-radius: 20px;
-        color: $baseColor;
-        height: 43px;
-        margin: 50px auto;   
-        padding-top: 2px;    
-        width: 240px;
-        transition: 0.5s;
-        font: bold 16px/40px 'Raleway', sans-serif;
-        text-transform: uppercase;
-        &:hover{
-            background-color: rgba(255,255,255,1);
-            box-shadow: 0px 0px 20px 10px rgba(250, 250, 250, 0.3);
-            cursor: pointer;
-        }
-} 

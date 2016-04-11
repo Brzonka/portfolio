@@ -8,34 +8,27 @@
 	100%{opacity: 1;}
 }
 @keyframes start-slide-bg-down{
-	from{bottom: -150px;}
+	from{opacity: 0; bottom: -150px;}
 	to{opacity: 1; bottom:0px;}
 }
 @keyframes start-slide-down{
-	from{bottom: -150px;}
+	from{opacity: 0; bottom: -150px;}
 	to{opacity: 1; bottom:0px;}
 }
 @keyframes start-slide-up{
-	from{position: relative; top: -50px;}
+	from{opacity: 0; position: relative; top: -50px;}
 	to{opacity: 1; position: relative; top: 0px;}
 }
 @keyframes start-slide-up2{
-	from{position: relative; top: -30px;}
+	from{opacity: 0; position: relative; top: -30px;}
 	to{opacity: 1; position: relative; top: 0px;}
 }
 @keyframes start-button{
-	from{position: relative; top: 20px;}
+	from{opacity: 0; position: relative; top: 20px;}
 	to{opacity:1; position: relative; top:0px;}
 }
-@keyframes start-color{
-	from{background-color: &secondColor;}
-	to{background-color: #000000;}
-}
-@keyframes bang{
-	0%{opacity:0;}
-	50%{opacity:1;}
-	1000%{opacity:0;}
-}
-.page-translate{
-	transform: translateX(-250px);
+
+@keyframes scale-photo{
+	from{opacity: 0; transform: scale(0.05, 1.3);}
+	to{opacity:1; transform: scale(1, 1);}
 }

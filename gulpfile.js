@@ -1,29 +1,27 @@
-var gulp=require('gulp');
-var uglify=require('gulp-uglify');
-var sass=require('gulp-ruby-sass');
-var autoprefixer=require('gulp-autoprefixer');
-var livereload=require('gulp-livereload');
-//uglify
-gulp.task('scripts', function(){
-	gulp.src('js/effects.js').pipe(uglify()).pipe(gulp.dest('build/js/'));
-});
+var gulp = require('gulp');
+var sass = require('gulp-ruby-sass');
+var autoprefix = require('gulp-autoprefixer');
+var browserSync = require('browser-sync');
 
-//sass
+//SASS
 gulp.task('styles',function(){
-	return sass('sass/*.scss').pipe(gulp.dest('build/css/'));
+	return sass('sass/main.scss').pipe(gulp.dest('build/css/'));
 });
-
-//autoprefixer
-gulp.task('autoprefix', function(){
-	gulp.src('build/css/*.css').pipe(autoprefixer()).pipe(gulp.dest('css/')).pipe(livereload());
+//Autoprefixer
+gulp.task('autopref', function(){
+	gulp.src('build/css/*.css').pipe(autoprefix()).pipe(gulp.dest('css/'));
 });
-
-//watch
+//
+gulp.task('sass-watch', ['styles'], browserSync.reload);
+//Watch
 gulp.task('watch', function(){
-	var server=livereload();
-	gulp.watch('js/effects.js', ['scripts']);
-	gulp.watch('sass/*', ['styles']);
-	gulp.watch('build/css/*.css', ['autoprefix']);
+	browserSync({
+		server: {
+			baseDir:'./'
+		}
+	});
+	gulp.watch('sass/**/*', ['sass-watch']);
+	gulp.watch('build/css/*.css', ['autopref']);
 });
 
-gulp.task('default', ['scripts', 'styles', 'watch']);
+gulp.task('default',['styles','watch']);

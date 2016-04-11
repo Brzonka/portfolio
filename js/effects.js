@@ -126,7 +126,7 @@ $(document).ready(function(){
 			$('.technology__header, .technology__header-bottom, .technology__list__item, .technology__button').css({"animation-play-state":"running"});}
 
 		if((height>(offset[3]-height_window/2))&&(height<(offset[4]-height_window/4))){
-			$('.projects__header, .projects__header-bottom, .projects__description, .projects__high-five__description, .projects__high-five__hand ').css({"animation-play-state":"running"});}
+			$('.projects__header, .projects__header-bottom, .projects__description, .projects__list__item').css({"animation-play-state":"running"});}
 
 		if((height>(offset[4]-height_window/2))&&(height<(offset[5]-height_window/4))){
 			$('.after-hours__header, .after-hours__header-bottom, .after-hours__list, .after-hours__list__item').css({"animation-play-state":"running"});}
@@ -153,9 +153,5 @@ $(document).ready(function(){
 		else{
 			$(this).addClass('.after-hours__list__item--open');
 			$(this).animate({height: height_img}, 500);}
-	})
-//Bang
-$('.projects__high-five__hand').click(function(){
-		$('.projects__high-five__bang').hide().fadeIn(100).fadeOut(400);
 	})
 })

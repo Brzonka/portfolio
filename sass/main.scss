@@ -1,9 +1,20 @@
-$baseColor: rgba(0,0,0,1);
-$secondColor: rgba(255,255,255,1);
+@import "helpers/mixins";
+
 @import "base/reset";
-body{
-	font-family: 'Ubuntu', sans-serif;
-	text-align: center;
-	min-width:340px;
-}
-@import "base/typography","components/navigation","components/buttons","helpers/mixins","layout/header","layout/footer","pages/prelude","pages/about","pages/technology","pages/projects","pages/after-hours","pages/contact","components/media","components/animation-keys" ;
+@import "base/typography";
+@import "base/base";
+
+@import "layout/header";
+@import "layout/footer";
+
+@import "pages/prelude";
+@import "pages/about";
+@import "pages/technology";
+@import "pages/projects";
+@import "pages/after-hours";
+@import "pages/contact";
+
+@import "components/navigation";
+@import "components/buttons";
+@import "components/media";
+@import "components/animation-keys";

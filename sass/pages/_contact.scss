@@ -1,5 +1,6 @@
 .contact{
-	margin-bottom: 100px;
+	@include header-of-section;
+	background: url('../img/bg3.jpg') bottom fixed;
 	&__description{
 		animation: 0.5s start-slide-up2 0.9s forwards paused;
 		color: $secondColor/1.5;

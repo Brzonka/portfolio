@@ -15,7 +15,7 @@
 		}
 	}
 }
-@media (min-width: 650px){
+@media (min-width: 640px){
 	.prelude{
 		&__header{
 			font-size: 30px;
@@ -36,7 +36,7 @@
 	}
 	.about{
 		&__photo{
-			margin-top: -70px;
+			
 		}
 	}
 }
@@ -62,9 +62,6 @@
 	.about{
 		&__description{
 			font-size: 22px;
-		}
-		&__photo{
-			margin-top: -100px;
 		}
 	}
 	.technology__list__item{
@@ -98,9 +95,6 @@
 		&__description{
 			font-size: 26px;
 		}
-		&__photo{
-			margin-top: -130px;
-		}
 	}
 	.contact{
 		margin-bottom: 150px;
@@ -125,9 +119,6 @@
 		padding-top: 130px;
 		&__description{
 			font-size: 26px;
-		}
-		&__photo{
-			margin-top: -160px;
 		}
 	}
 }

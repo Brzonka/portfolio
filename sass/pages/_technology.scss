@@ -1,4 +1,6 @@
 .technology{
+	@include header-of-section;
+	background: url('../img/bg2.jpg') right fixed;
 	&__list{
 		box-sizing: border-box;
 		margin: 40px auto;
@@ -8,35 +10,34 @@
 			box-sizing: border-box;
 			display: inline-block;
 			margin: 20px;
-			opacity: 0;
 			overflow: hidden;
 			width: calc(33.33% - 45px);
 			&:nth-child(1){
-				animation: 0.5s start-slide-up2 0.8s forwards paused;
+				animation: 0.5s start-slide-up2 0.8s backwards paused;
 			}
 			&:nth-child(2){
-				animation: 0.5s start-slide-up2 1s forwards paused;
+				animation: 0.5s start-slide-up2 1s backwards paused;
 			}
 			&:nth-child(3){
-				animation: 0.5s start-slide-up2 1.2s forwards paused;
+				animation: 0.5s start-slide-up2 1.2s backwards paused;
 			}
 			&:nth-child(4){
-				animation: 0.5s start-slide-up2 1.4s forwards paused;
+				animation: 0.5s start-slide-up2 1.4s backwards paused;
 			}
 			&:nth-child(5){
-				animation: 0.5s start-slide-up2 1.6s forwards paused;
+				animation: 0.5s start-slide-up2 1.6s backwards paused;
 			}
 			&:nth-child(6){
-				animation: 0.5s start-slide-up2 1.8s forwards paused;
+				animation: 0.5s start-slide-up2 1.8s backwards paused;
 			}
 			&:nth-child(7){
-				animation: 0.5s start-slide-up2 2s forwards paused;
+				animation: 0.5s start-slide-up2 2s backwards paused;
 			}
 			&:nth-child(8){
-				animation: 0.5s start-slide-up2 2.2s forwards paused;
+				animation: 0.5s start-slide-up2 2.2s backwards paused;
 			}
 			&:nth-child(9){
-				animation: 0.5s start-slide-up2 2.4s forwards paused;
+				animation: 0.5s start-slide-up2 2.4s backwards paused;
 			}
 			&__img{
 				filter: grayscale(100%);
@@ -50,5 +51,15 @@
 				-webkit-filter: grayscale(0%);
 			}
 		}
+	}
+	&__button{
+		@extend %buttons;
+		animation: 0.8s start-slide-up2 2.6s backwards paused;
+		background-color: rgba(0,0,0, 0.8);
+		color: $secondColor;
+	    &:hover{
+	        background-color: $baseColor;
+	        box-shadow: 0px 0px 20px 10px rgba(0,0,0, 0.3);
+	    }
 	}
 }
