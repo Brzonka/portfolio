@@ -1,27 +1,25 @@
 <!DOCTYPE HTML>
 <html lang="pl">
 <head>
+	<title>Portfolio - Jakub Babrzymąka</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width">
 	<meta name="keywords" content="portfolio, frontend, html, css, webdesign">
 	<meta name="description" content="Portfolio about frontend developer">
 	<meta name="author" content="Jakub Babrzymąka">
-	<title>Portfolio - Jakub Babrzymąka</title>
 	<link rel="Shortcut icon" href="img/favicon.ico">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<link rel="stylesheet" type="text/css" href="css/fontello.css">
-	<link href='https://fonts.googleapis.com/css?family=Josefin+Sans:400,700|Raleway:400,900,700|Ubuntu:400,700|Fira+Mono:400,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-	<script type="text/javascript" src="js/jquery-2.2.1.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/colorbox.css">
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800,300&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+	<script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
+	<script type="text/javascript" src="js/jquery.photoset-grid.min.js"></script>
+	<script type="text/javascript" src="js/jquery.colorbox-min.js"></script>
 	<script type="text/javascript" src="js/effects.js"></script>
 </head>
 <body>
-	<header class="header-of-page">
-		<section class="prelude">
-			<h1 class="prelude__header">jakub<strong class="prelude__header--size1">[babrzymąka]</strong><strong class="prelude__header--size2">front-end developer</strong></h1>
-			<button class="prelude__button" type="button" title="Poznaj mnie lepiej!">dowiedz się wiecej</button>
-		</section>
-	</header>
-	<section class="menu">
+	<h1 class="outline-only">Portfolio - Jakub Babrzymąka</h1>
+	<div class="menu">
 		<div class="menu__hamburger">
 			<div class="menu__hamburger__item"></div>
 			<div class="menu__hamburger__item"></div>
@@ -29,27 +27,34 @@
 		</div>
 		<p class="menu__text">menu</p>
 		<p class="menu__text-name">jakub <span class="menu__text-name--color">babrzymąka</span></p>
-	</section>
+	</div>
 	<nav class="navigation">
+		<h2 class="outline-only">Navigation</h2>
 		<ul class="navigation__list">
-			<li class="navigation__list__item"><a class="navigation__list__item__link" href="#1">Start</a></li>
-			<li class="navigation__list__item"><a class="navigation__list__item__link" href="#2">O mnie</a></li>
-			<li class="navigation__list__item"><a class="navigation__list__item__link" href="#3">Technologia</a></li>
-			<li class="navigation__list__item"><a class="navigation__list__item__link" href="#4">Projekty</a></li>
-			<li class="navigation__list__item"><a class="navigation__list__item__link" href="#5">Po godzinach</a></li>
-			<li class="navigation__list__item"><a class="navigation__list__item__link" href="#6">Kontakt</a></li>
+			<li class="navigation__list__item"><a class="navigation__list__item__link" href="#start">Start</a></li>
+			<li class="navigation__list__item"><a class="navigation__list__item__link" href="#o-mnie">O mnie</a></li>
+			<li class="navigation__list__item"><a class="navigation__list__item__link" href="#technologie">Technologia</a></li>
+			<li class="navigation__list__item"><a class="navigation__list__item__link" href="#projekty">Projekty</a></li>
+			<li class="navigation__list__item"><a class="navigation__list__item__link" href="#po-godzinach">Po godzinach</a></li>
+			<li class="navigation__list__item"><a class="navigation__list__item__link" href="#kontakt">Kontakt</a></li>
 		</ul>
 	</nav>
+	<header class="header-of-page">
+		<section class="prelude">
+			<h1 class="prelude__header">Jakub <strong class="prelude__header--size1">Babrzymąka </strong><strong class="prelude__header--size2">Front-end Developer</strong></h1>
+			<button class="prelude__button" type="button" title="Poznaj mnie lepiej!">dowiedz się więcej</button>
+		</section>
+	</header>
 	<main class="main-of-page">
 		<section class="about">
-			<h2 class="about__header">o mnie</h2>
-			<h4 class="about__header-bottom">kim jestem</h4>
+			<h2 class="about__header">O mnie</h2>
+			<p class="about__header-bottom">kim jestem</p>
 			<img class="about__photo" src="img/author.png" alt="Photo of author">
 			<p class="about__description">Zajmuję się tworzeniem stron www oraz projektowaniem grafiki. W wolnych chwilach fotografuję i gram na gitarze.</p>
 		</section>
 		<section class="technology">
-			<h2 class="technology__header">technologie</h2>
-			<h4 class="technology__header-bottom">co potrafię</h4>
+			<h2 class="technology__header">Technologie</h2>
+			<p class="technology__header-bottom">co potrafię</p>
 			<ul class="technology__list">
 				<li class="technology__list__item"><img class="technology__list__item__img" src="img/html5.png" alt="Logo HTML5"></li>
 				<li class="technology__list__item"><img class="technology__list__item__img" src="img/css3.png" alt="logo CSS3"></li>
@@ -66,24 +71,24 @@
 			</a>
 		</section>
 		<section class="projects">
-			<h2 class="projects__header">projekty</h2>
-			<h4 class="projects__header-bottom">jak to się robi</h4>
-			<p class="projects__description">Projekty powstałe na bazie template psd</p>
+			<h2 class="projects__header">Projekty</h2>
+			<p class="projects__header-bottom">jak to się robi</p>
+			<p class="projects__description">Projekty powstałe na bazie szablonów PSD.</p>
 			<ul class="projects__list">
 				<li class="projects__list__item">
-					<a href="" class="projects__list__item__link">
+					<a href="slide/index.html" class="projects__list__item__link" target="_blank">
 						<img src="img/project1.jpg" alt="" class="projects__list__item__link__photo">
 					</a>
 					<div class="projects__list__item__link__description">Project SLIDE</div>
 				</li>
 				<li class="projects__list__item">
-					<a href="" class="projects__list__item__link">
+					<a href="wood/index.html" class="projects__list__item__link" target="_blank">
 						<img src="img/project2.jpg" alt="" class="projects__list__item__link__photo">	
 					</a>
 					<div class="projects__list__item__link__description">Project WOODER</div>
 				</li>
 				<li class="projects__list__item">
-					<a href="" class="projects__list__item__link">
+					<a href="pixture/index.html" class="projects__list__item__link" target="_blank">
 						<img src="img/project3.jpg" alt="" class="projects__list__item__link__photo">	
 					</a>
 					<div class="projects__list__item__link__description">Project PIXTURE</div>
@@ -91,52 +96,25 @@
 			</ul>
 		</section>
 		<section class="after-hours">
-			<h2 class="after-hours__header">po godzinach</h2>
-			<h4 class="after-hours__header-bottom">fotografia</h4>
-			<ul class="after-hours__list">
-				<li class="after-hours__list__item">
-					<img class="after-hours__list__item__img" src="img/1.jpg" alt="Niemcy - Berlin, sklep z pamiątkami">
-					<p class="after-hours__list__item__description">Niemcy<span class="after-hours__list__item__description--style">Berlin</span></p>
-				</li>
-				<li class="after-hours__list__item">
-					<img class="after-hours__list__item__img" src="img/2.jpg" alt="Niemcy - Berlin, architektura nowoczesna">
-					<p class="after-hours__list__item__description">Niemcy<span class="after-hours__list__item__description--style">Berlin</span></p>
-				</li>
-				<li class="after-hours__list__item">
-					<img class="after-hours__list__item__img" src="img/3.jpg" alt="Austria - Attersee, poranek nad jeziorem Attersee">
-					<p class="after-hours__list__item__description">Austria<span class="after-hours__list__item__description--style">Attersee</span></p>
-				</li>
-				<li class="after-hours__list__item">
-					<img class="after-hours__list__item__img" src="img/4.jpg" alt="Hiszpania - Walencja, dzieci grające w piłkę nożną na placu przy zaniedbanej zabudowie">
-					<p class="after-hours__list__item__description">Hiszpania<span class="after-hours__list__item__description--style">Walencja</span></p>
-				</li>
-				<li class="after-hours__list__item">
-					<img  class="after-hours__list__item__img"src="img/5.jpg" alt="Andora - Andora, diabelski młyn, a w tle góry okryte chmurami">
-					<p class="after-hours__list__item__description">Andora<span class="after-hours__list__item__description--style">Andora</span></p>
-				</li>
-				<li class="after-hours__list__item">
-					<img class="after-hours__list__item__img" src="img/6.jpg" alt="Francja - Nicea, zachód słońca nad morzem, częściowo odbity w kałużach deszczu">
-					<p class="after-hours__list__item__description">Francja<span class="after-hours__list__item__description--style">Nicea</span></p>
-				</li>
-				<li class="after-hours__list__item">
-					<img class="after-hours__list__item__img" src="img/7.jpg" alt="Lichtenstein - Vadus, panorama miasta">
-					<p class="after-hours__list__item__description">Lichtenstein<span class="after-hours__list__item__description--style">Vaduz-panorama</span></p>
-				</li>
-				<li class="after-hours__list__item">
-					<img class="after-hours__list__item__img" src="img/8.jpg" alt="Porsche GT3 R">
-					<p class="after-hours__list__item__description">Porsche<span class="after-hours__list__item__description--style">GT3 RS</span></p>
-				</li>
-				<li class="after-hours__list__item">
-					<img class="after-hours__list__item__img" src="img/9.jpg" alt="Volksvagen Concept">
-					<p class="after-hours__list__item__description">Volksvagen<span class="after-hours__list__item__description--style">Concept GT</span></p>
-				</li>
-			</ul>
+			<h2 class="after-hours__header">Po godzinach</h2>
+			<p class="after-hours__header-bottom">fotografia</p>
+			<div class="after-hours__photoset-grid" data-layout="23121" style="visibility: hidden;">
+				<img class="after-hours__photoset-grid__img" src="img/1.jpg" alt="Niemcy - Berlin, sklep z pamiątkami">	
+				<img class="after-hours__photoset-grid__img" src="img/2.jpg" alt="Niemcy - Berlin, architektura nowoczesna">	
+				<img class="after-hours__photoset-grid__img" src="img/3.jpg" alt="Austria - Attersee, poranek nad jeziorem Attersee">	
+				<img class="after-hours__photoset-grid__img" src="img/4.jpg" alt="Hiszpania - Walencja, dzieci grające w piłkę nożną na placu przy zaniedbanej zabudowie">	
+				<img  class="after-hours__photoset-grid__img"src="img/5.jpg" alt="Andora - Andora, diabelski młyn, a w tle góry okryte chmurami">
+				<img class="after-hours__photoset-grid__img" src="img/6.jpg" alt="Francja - Nicea, zachód słońca nad morzem, częściowo odbity w kałużach deszczu">
+				<img class="after-hours__photoset-grid__img" src="img/8.jpg" alt="Porsche GT3 R">
+				<img class="after-hours__photoset-grid__img" src="img/9.jpg" alt="Volksvagen Concept">	
+				<img class="after-hours__photoset-grid__img" src="img/7.jpg" alt="Lichtenstein - Vadus, panorama miasta">	
+			</div>		
 		</section>
 		<section class="contact">
-			<h2 class="contact__header">kontakt</h2>
-			<h4 class="contact__header-bottom">odezwij się</h4>
-			<p class="contact__description">Jeśli masz do mnie pytanie skontaktuj się korzystając z podanych niżej danych.</p>
-			<p class="contact__phone">+46 661 166 093</p>
+			<h2 class="contact__header">Kontakt</h2>
+			<p class="contact__header-bottom">odezwij się</p>
+			<p class="contact__description">Jeśli masz do mnie pytanie lub chciałbyś nawiązać współpracę skontaktuj się korzystając z podanych niżej danych.</p>
+			<p class="contact__phone">+48 661 166 093</p>
 			<p class="contact__email">jakub.babrzymaka@gmail.com</p>
 			<ul class="contact__social-media">
 				<li class="contact__social-media__item"><a class="contact__social-media__item__link" href="https://www.facebook.com/Wildfreund" target="_blank"><i class="icon-facebook"></i></a></li>

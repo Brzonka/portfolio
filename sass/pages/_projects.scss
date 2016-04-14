@@ -1,5 +1,7 @@
 .projects{
 	@include header-of-section;
+	border-bottom: 1px solid rgb(235 ,235 ,235);
+	overflow: hidden;
 	&__description{
 		@extend .about__description;
 		margin-top: 40px;
@@ -17,7 +19,7 @@
 				animation: 0.3s scale-photo 1.2s backwards paused;
 			} 	
 			&__link{
-				border-radius: 10px;
+				border-radius: 6px;
 				box-sizing: border-box;
 				display: inline-block;
 				overflow: hidden;
@@ -32,7 +34,7 @@
 					width: 100%;
 					z-index: 0;
 					&:hover{
-						transform: scale(1.15);
+						transform: scale(1.1);
 					}
 				}
 				&__description{
@@ -41,5 +43,11 @@
 				}
 			}
 		}
+	}
+}
+@media (min-width: 1000px){
+	.projects__list__item{
+		float: left;
+		width: calc(33.33%);
 	}
 }

@@ -1,21 +1,19 @@
-$baseColor: rgba(0,0,0,1);
-$secondColor: rgba(255,255,255,1);
-$no-color: rgba(0,0,0,0);
+
 //Colors
-$light-green: rgb(65, 187, 153);
+$no-color: rgba(0 ,0 ,0 ,0);
+$black: rgb(0 ,0 ,0);
 $white: rgb(255, 255, 255);
 $grey: rgb(48, 48, 48);
+$grey-light-medium: rgb(98, 98, 98);
 $grey-light: rgb(212, 212, 212);
-$second-color: $light-green;
-$text-color-dark: $grey;
+$base-color: $grey;
+$second-color: $white;
+$text-color-dark: $grey-light-medium;
 $text-color-darklight: $grey-light;
-$text-color-light: $white;
-$bg-mask: rgba(112, 113, 114, 0.8);
-$dot-color: rgba(192, 193, 194, 0.7);
 //Fonts:
 //style
-$base-font: ('Ubuntu', sans-serif);
-$second-font: ('Raleway', sans-serif);
+$base-font: ('Open Sans', sans-serif);
+$second-font: ('Open Sans', sans-serif);
 
 //size
 $breakpoints: (
@@ -25,15 +23,14 @@ $breakpoints: (
 );
 $h1-font-sizes: (
   'null'  : 2.0em,
-  'small': 3em,
-  'medium': 5em,
-  'large' : 6em
+  'small': 2.6em,
+  'medium': 3.6em,
+  'large' : 5.0em
 );
 $h2-font-sizes: (
   'null'  : 2.6em,
-  'small': 3.2em,
-  'medium': 5em,
-  'large' : 6em
+  'medium': 3.2em,
+  'large' : 4.2em
 );
 $h3-font-sizes: (
   'null'  : 1.2em,
@@ -42,22 +39,13 @@ $h3-font-sizes: (
 );
 $h4-font-sizes: (
   'null'  : 1.2em,
-  'large' : 0.8em,
+  'medium': 1.8em,
+  'large' : 1.6em,
 );
-$description-large-font-sizes: (
+$description-font-sizes: (
   'null'  : 1.6em,
-  'small': 2.2em,
-  'large': 3.6em,
-);
-$description-middle-font-sizes: (
-  'null'  : 1.4em,
-  'small': 1.8em,
-  'large': 2.2em,
-);
-$description-small-font-sizes: (
-  'null'  : 1.2em,
-  'small': 1.6em,
-  'large': 2.0em,
+  'small': 2.0em,
+  'large': 2.4em,
 );
 $name-font-sizes: (
   'null'  : 2.0em,
@@ -66,4 +54,16 @@ $name-font-sizes: (
 $navi-font-sizes: (
   'null'  : 2.0em,
   'large' : 1.4em,
+);
+$phone-font-sizes: (
+  'null'  : 2.6em,
+  'large' : 4.2em,
+);
+$email-font-sizes: (
+  'null'  : 1.6em,
+  'large' : 2.6em,
+);
+$social-font-sizes: (
+  'null'  : 2.6em,
+  'large' : 3.2em,
 );

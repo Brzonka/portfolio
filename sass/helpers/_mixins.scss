@@ -54,9 +54,10 @@
     padding: 80px 15px;
     text-align: center;
     &__header{
+        color: $base-color;
         animation: 0.8s start-slide-up2 backwards paused;
         @include font-size($h2-font-sizes);
-        font-weight: bold;
+        font-weight: 700;
         line-height: 150%;
         letter-spacing: 3px;
         text-transform: uppercase;
@@ -64,20 +65,17 @@
     &__header-bottom{
         animation: 0.8s start-slide-up2 0.3s backwards paused;
         color: $text-color-dark;
-        letter-spacing: 2px;
+        @include font-size($h4-font-sizes);
+        letter-spacing: 7px;
         text-transform: uppercase;
         &::after{
             animation: 0.5s start-slide-up2 0.6s backwards;
-            background: $secondColor;
-            background: -webkit-linear-gradient(to left,$no-color,rgba(0,0,0,1),$no-color);
-            background: -o-linear-gradient(to left,$no-color,rgba(0,0,0,1),$no-color);
-            background: -moz-linear-gradient(to left,$no-color,rgba(0,0,0,1),$no-color);
-            background: linear-gradient(to left,$no-color,rgba(0,0,0,1),$no-color); 
+            background: $text-color-darklight;
             content: "";
             display:block;
             height: 2px;
-            margin: 15px auto;
-            width: 150px;
+            margin: 25px auto;
+            width: 50px;
         }
     }
 }

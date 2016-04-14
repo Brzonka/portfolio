@@ -1,10 +1,11 @@
 .menu{
-	animation: 4s start-slide-right;
+	animation: 1s start-slide-right 1.5s backwards;
 	position: absolute;
 	right: 0px;
 	top: 0px;
 	transition: 1s;
 	width: 100%;
+	z-index: 10;
 	&__hamburger{
 		float: right;
 		margin: 35px;
@@ -22,8 +23,8 @@
 			margin: 6px 0;
 		}
 		&__item{
-			background-color: $secondColor;
-			border: 1px solid $secondColor;
+			background-color: $second-color;
+			border: 1px solid $second-color;
 			border-radius: 1px;
 			height: 2px;
 			margin: 3px 0;
@@ -64,12 +65,12 @@
 		text-transform: uppercase;
 	}
 	&__text{
-		color: $secondColor;
+		color: $second-color;
 		float: right;
 		margin-top: 36px;
 	}
 	&__text-name{
-		color: $baseColor;
+		color: $base-color;
 		float: left;
 		letter-spacing: 2px;
 		margin: 18px 40px;
@@ -79,9 +80,9 @@
 		}
 	}
 	&--fixed{
-		background-color: $secondColor;
+		background-color: $second-color;
 		border-bottom: 1px solid $text-color-darklight;
-		border-right: 2px solid $secondColor;
+		border-right: 2px solid $second-color;
 		left: 0;
 		position: fixed;
 		top: 0;
@@ -91,14 +92,14 @@
 			&__hamburger{
 				margin: 18px 40px;
 				&__item{
-					background-color: $baseColor;
+					background-color: $base-color;
 				}
 				&:hover{
 					margin: 12px 40px;
 				}
 			}
 			&__text{
-				color: $baseColor;
+				color: $base-color;
 				margin: 20px -10px;
 			}
 			&__text-name{
@@ -120,7 +121,7 @@
 		margin: 15px 40px;
 }
 .navigation{
-	background-color: $secondColor;
+	background-color: $second-color;
 	border-left: 1px solid $text-color-darklight;
 	box-sizing: border-box;
 	height: 100%;
@@ -153,7 +154,7 @@
 		}
 	}
 	&--big-screen{
-		animation: 4s start-slide-right;
+		animation: 1s start-slide-right 1.5s backwards;
 		background: none;
 		border-left: none;
 		height: auto;
@@ -175,7 +176,7 @@
 				width: auto;
 				&__link{
 					background: none;
-					color: $secondColor;
+					color: $second-color;
 					line-height: 30px;
 					font-weight: bold;
 					letter-spacing: 2px;
@@ -193,6 +194,15 @@
 			width: auto;
 			& .navigation__list__item__link{
 				color: $text-color-dark;
+			}
+		}
+	}
+}
+@media (min-width: 600px){
+	.menu--fixed{
+		& .menu{
+			&__text-name{
+				display: inline;
 			}
 		}
 	}

@@ -1,43 +1,48 @@
 .contact{
 	@include header-of-section;
-	background: url('../img/bg3.jpg') bottom fixed;
+	background: url('../img/bg3.jpg') top fixed;
+	background-size: cover;
 	&__description{
-		animation: 0.5s start-slide-up2 0.9s forwards paused;
-		color: $secondColor/1.5;
-		font: 14px/150% 'Ubuntu', sans-serif;
+		animation: 0.5s start-slide-up2 0.9s backwards paused;
+		color: $text-color-dark;
+		@include font_size($description-font-sizes);
+		font-weight: 300;
+		line-height: 150%;
+		margin-left: auto;
+		margin-right: auto;
 		margin-top: 40px;
-		opacity: 0;
+		width: 50%;
 	}
 	&__phone{
-		animation: 0.5s start-slide-up2 1.2s forwards paused;
-		font: bold 26px/150% 'Ubuntu', sans-serif;
+		animation: 0.5s start-slide-up2 1.1s backwards paused;
+		@include font_size($phone-font-sizes);
+		line-height: 150%;
 		margin-top: 30px;
-		opacity: 0;
 	}
 	&__email{
-		animation: 0.5s start-slide-up2 1.5s forwards paused;
-		font: 16px/150% 'Raleway', sans-serif;
-		opacity: 0
+		animation: 0.5s start-slide-up2 1.3s backwards paused;
+		@include font_size($email-font-sizes);
+		line-height: 150%;
+		font-family: $second-font;
 	}
 	&__social-media{
-		animation: 0.5s start-slide-up2 1.8s forwards paused;
-		margin: 10px auto;
-		opacity: 0;
+		animation: 0.5s start-slide-up2 1.5s backwards paused;
+		margin: 50px auto 10px auto;
 		&__item{
 			display: inline-block;
-			font-size: 26px;
+			margin: 7px;
+			@include font_size($social-font-sizes);
 			&__link{
-				color: $baseColor;
+				background-color: $base-color;
+				border-radius: 50%;
+				color: $second-color;
 				content: "";
 				padding:15px;
 				transition: 0.5s;
-				:hover{
-					color: #3b5998;
+				&:hover{
+					color: rgba(200, 187, 117, 1);
 				}
 			}
-
-
 		}
 	}
-
 }

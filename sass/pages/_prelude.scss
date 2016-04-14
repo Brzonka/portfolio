@@ -2,26 +2,34 @@
 	overflow: hidden;
 	text-align: center;
 	&__header{
-		animation: 1s start-slide-up 0.5s backwards;
-		color: $secondColor;
+		animation: 0.7s start-slide-up 0.2s backwards;
+		color: $second-color;
 		font: 'Fira Mono', sans-serif;
 		@include font-size($h1-font-sizes);
-		font-weight: bold;
-		margin-top: 30vh;
+		font-weight: 800;
+		margin-top: 28vh;
+		text-shadow: 0px 5px 30px rgba(0, 0, 0, 0.4);
 		text-transform: uppercase;
 		&--size1{
-			animation: 1s start-slide-up 1s backwards;
+			animation: 0.7s start-slide-up 0.6s backwards;
 			display: block;
 			font-size: 160%;
 		}
 		&--size2{
-			animation: 1s start-slide-up 1.5s backwards;
+			animation: 0.7s start-slide-up 1.0s backwards;
 			display: block;
 			font-size: 80%;
+			line-height: 130%;
 		}
 	}
 	&__button{
 		@extend %buttons;
-		animation: 1s start-button 2.5s backwards;
+		animation: 1s start-button 1.5s backwards;
+		box-shadow: inset 0 0 0 2px rgba(250, 250, 250, 0.8);
+    	color: $second-color;
+		&:hover{
+	        color: $base-color;
+	        box-shadow: inset 0 0 0 30px rgba(250, 250, 250, 0.8);
+	    }
 	}
 }
